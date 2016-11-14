@@ -42,7 +42,8 @@
       background-color:red;
       font-size:16px;
     }
-    可以写很多
+    ...
+    可以写很多个样式
   </style>
   ```
 
@@ -111,12 +112,13 @@
   text-decoration(underline,ling-through)
   	
   word-spacing
-
   ```
 
   ### CSS背景属性（展示例子）
 
-  该属性是复合属性，看看各参数对应的属性
+  设置对象的背景样式
+
+  参考手册进行讲解
 
   ```
   语法：

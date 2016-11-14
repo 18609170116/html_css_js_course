@@ -1,0 +1,30 @@
+p {
+    background: darkgrey none no-repeat fixed;
+}
+
+.mydiv1 {
+    background: url("../img/内容与样式分离.jpg") repeat fixed 4.1%;
+}
+
+.mydiv2 {
+    background: url("../img/web服务器工作原理.jpg") repeat scroll 4.1%;
+    margin: 20px 20px 20px 20px;
+    border: 1px solid #000;
+    width: 600px;
+    height: 4000px;
+}
+
+/**为什么会出现两张图片呢？
+原因是有两个div，每个div都有个背景图*/
+
+li {
+    list-style: url("../icon/selected.png") inside disc;
+}
+
+ul {
+    list-style: outside upper-roman;
+}
+
+ol {
+    list-style: square;
+}
