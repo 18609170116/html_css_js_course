@@ -82,6 +82,11 @@
   .myclass{
     color:red
   }
+  高级写法：
+  .a.b{
+    font-size:1em;
+  }
+  此例匹配同时具有a 和 b class的元素。
   ```
 
   参考网站：http://www.w3cschool.cn/css

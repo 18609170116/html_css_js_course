@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32c8b503-a9b5-4dd9-b06c-fd2a90b22294" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/bg1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mov/movie.mp4" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css2.chm" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w1d1-Html常用标签备课记录.md" afterPath="$PROJECT_DIR$/w1d1-Html常用标签备课记录.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w1d2-Html表格、框架、视频、音频备课记录.md" afterPath="$PROJECT_DIR$/w1d2-Html表格、框架、视频、音频备课记录.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w1d3-Html表单和表单元素.md" afterPath="$PROJECT_DIR$/w1d3-Html表单和表单元素.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w1d4-CSS作用，文本、字体属性、背景属性、列表属性、表格属性、伪类样式，三种基本样式规则、三种引入方式.md" afterPath="$PROJECT_DIR$/w1d4-CSS作用，文本、字体属性、背景属性、列表属性、表格属性、伪类样式，三种基本样式规则、三种引入方式.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/w1d4.css" afterPath="$PROJECT_DIR$/css/w1d4.css" />
     </list>
     <ignored path="html_css_js_course.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -259,12 +252,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479171587143</updated>
-      <workItem from="1479171588249" duration="16930000" />
+      <workItem from="1479171588249" duration="18663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16930000" />
+    <option name="totallyTimeSpent" value="18663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
