@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        h1 {
+            font-size: 16px;
+            font-family: Arial;
+        }
+
+        .auto {
+            table-layout: auto;
+            width: 350px;
+            border-collapse: collapse;
+        }
+
+        .fixed {
+            table-layout: fixed;
+            width: 350px;
+            border-spacing: 10px 20px;
+            margin: 0 auto;
+            caption-side: bottom;
+            empty-cells: hide;
+        }
+    </style>
+</head>
+<body>
+<h1>auto: 表格自动算法</h1>
+<table border="1" class="auto">
+    <tbody>
+    <tr>
+        <td>表格自动算法，宽度将基于单元格的内容自动拉伸</td>
+        <td>表格自动算法</td>
+        <td>表格自动算法</td>
+    </tr>
+    <tr>
+        <td>表格自动算法</td>
+        <td>表格自动算法</td>
+        <td>表格自动算法</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<h1>fixed: 表格固定算法</h1>
+<table border="1" class="fixed">
+    <caption style="font-size: 2em;font-family: 'Microsoft YaHei UI';">表1：表格示例</caption>
+    <tbody>
+    <tr>
+        <td>表格固定算法</td>
+        <td>表格固定算法表格固定算法表格固定算法表格固定算法表格固定算法</td>
+        <td>表格固定算法</td>
+    </tr>
+    <tr>
+        <td>表格固定算法</td>
+        <td>表格固定算法</td>
+        <td>表格固定算法</td>
+    </tr>
+    <tr>
+        <td>表格固定算法</td>
+        <td></td>
+        <td>表格固定算法</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

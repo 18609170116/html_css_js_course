@@ -12,13 +12,15 @@ p {
     border: 1px solid #000;
     width: 600px;
     height: 4000px;
+    /*div居中*/
+    margin:0 auto;
 }
 
 /**为什么会出现两张图片呢？
 原因是有两个div，每个div都有个背景图*/
 
 li {
-    list-style: url("../icon/selected.png") inside disc;
+    list-style: url("../icon/selected1.png") inside circle;
 }
 
 ul {

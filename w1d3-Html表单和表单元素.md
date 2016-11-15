@@ -25,16 +25,16 @@
 - ### 表单属性
 
 
-| accept                                   | *MIME_type*                         | HTML 5 中不支持。                |
-| ---------------------------------------- | ----------------------------------- | --------------------------- |
-| [accept-charset](http://www.w3school.com.cn/tags/att_form_accept-charset.asp) | *charset_list*                      | 规定服务器可处理的表单数据字符集。           |
-| [action](http://www.w3school.com.cn/tags/att_form_action.asp) | *URL*                               | 规定当提交表单时向何处发送表单数据。          |
-| [autocomplete](http://www.w3school.com.cn/tags/att_form_autocomplete.asp) | onoff                               | 规定是否启用表单的自动完成功能。            |
-| [enctype](http://www.w3school.com.cn/tags/att_form_enctype.asp) | 见下面说明                               | 规定在发送表单数据之前如何对其进行编码。        |
-| [method](http://www.w3school.com.cn/tags/att_form_method.asp) | getpost                             | 规定用于发送 form-data 的 HTTP 方法。 |
-| [name](http://www.w3school.com.cn/tags/att_form_name.asp) | *form_name*                         | 规定表单的名称。                    |
-| [novalidate](http://www.w3school.com.cn/tags/att_form_novalidate.asp) | novalidate                          | 如果使用该属性，则提交表单时不进行验证。        |
-| [target](http://www.w3school.com.cn/tags/att_form_target.asp) | _blank _self _parent _top framename | 规定在何处打开 action URL。         |
+| accept                                   | *MIME_type*                         | HTML 5 中不支持。             |
+| ---------------------------------------- | ----------------------------------- | ------------------------ |
+| accept-charset | *charset_list*                      | 服务器可处理的表单数据字符集。          |
+| action | *URL*                               | 提交表单时向何处发送表单数据。          |
+| autocomplete                             | onoff                               | 是否启用表单的自动完成功能。           |
+| enctype                                  | 见下面说明                               | 在发送表单数据之前如何对其进行编码。       |
+| method                                   | getpost                             | 于发送 form-data 的 HTTP 方法。 |
+| name | 形象的名字如login-form                    | 表单的名称。                   |
+| novalidate | novalidate                          | 如果使用该属性，则提交表单时不进行验证。     |
+| target | _blank _self _parent _top framename | 规定在何处打开 action URL。      |
 
 enctype常用取值
 
@@ -67,8 +67,8 @@ enctype常用取值
 
       <fieldset>
           <legend>请选择性别</legend>
-          男性：<input type="radio" name="sex" value="男"/><br>
-          女性：<input type="radio" name="sex" value="女"/>
+          男性：<input type="radio" name="gender" value="男"/><br>
+          女性：<input type="radio" name="gender" value="女"/>
       </fieldset>
   ```
 
@@ -78,14 +78,14 @@ enctype常用取值
   ```
 
   ```
-  <button>
+  <button>按钮
   ```
 
 ## 2、重点、难点知识讲解思路
 
 - GET和POST的差异：
 
--  form表单常用属性有哪些？
+- form表单常用属性有哪些？
 
 - 多选一效果如果实现？
 

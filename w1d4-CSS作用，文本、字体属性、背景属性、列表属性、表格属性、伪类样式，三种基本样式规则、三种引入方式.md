@@ -56,7 +56,7 @@
   ```
 
 
-- ### CSS常用的选择器
+- ### CSS常用的3个选择器
 
   1、html tag选择器
 
@@ -137,13 +137,62 @@
 
   ### CSS表格属性
 
+  ```
+  table-layout:auto|fixed  表格布局
+  border-collapse：separate | collapse 边框合并
+  border-spacing：<length>{1,2} 横向和纵向间距
+  caption-side:top|bottom   设置表格的caption对象在头或尾
+  empty-cells：hide | show   空单元格是否显示
+  ```
+
   ### CSS伪类样式
+
+  ```
+  a:link {} 未被访问前
+  a:visited {} 访问过的
+  a:hover {} 在上面滑动时
+  a:active {} 按下的那一瞬间鼠标并未抬起
+  ```
+
+伪类选择器：了解即可
+
+| 选择符                                      | 版本     | 描述                                       |
+| ---------------------------------------- | ------ | ---------------------------------------- |
+| [E:link](link.htm)                       | CSS1   | 设置超链接a在未被访问前的样式。                         |
+| [E:visited](visited.htm)                 | CSS1   | 设置超链接a在其链接地址已被访问过时的样式。                   |
+| [E:hover](hover.htm)                     | CSS1/2 | 设置元素在其鼠标悬停时的样式。                          |
+| [E:active](active.htm)                   | CSS1/2 | 设置元素在被用户激活（在鼠标点击与释放之间发生的事件）时的样式。         |
+| [E:focus](focus.htm)                     | CSS1/2 | 设置元素在成为输入焦点（该元素的onfocus事件发生）时的样式。        |
+| [E:lang(fr)](lang(fr).htm)               | CSS2   | 匹配使用特殊语言的E元素。                            |
+| [E:not(s)](not(s).htm)                   | CSS3   | 匹配不含有s选择符的元素E。                           |
+| [E:root](root.htm)                       | CSS3   | 匹配E元素在文档的根元素。                            |
+| [E:first-child](first-child.htm)         | CSS2   | 匹配父元素的第一个子元素E。                           |
+| [E:last-child](last-child.htm)           | CSS3   | 匹配父元素的最后一个子元素E。                          |
+| [E:only-child](only-child.htm)           | CSS3   | 匹配父元素仅有的一个子元素E。                          |
+| [E:nth-child(n)](nth-child(n).htm)       | CSS3   | 匹配父元素的第n个子元素E。                           |
+| [E:nth-last-child(n)](nth-last-child(n).htm) | CSS3   | 匹配父元素的倒数第n个子元素E。                         |
+| [E:first-of-type](first-of-type.htm)     | CSS3   | 匹配同类型中的第一个同级兄弟元素E。                       |
+| [E:last-of-type](last-of-type.htm)       | CSS3   | 匹配同类型中的最后一个同级兄弟元素E。                      |
+| [E:only-of-type](only-of-type.htm)       | CSS3   | 匹配同类型中的唯一的一个同级兄弟元素E。                     |
+| [E:nth-of-type(n)](nth-of-type(n).htm)   | CSS3   | 匹配同类型中的第n个同级兄弟元素E。                       |
+| [E:nth-last-of-type(n)](nth-last-of-type(n).htm) | CSS3   | 匹配同类型中的倒数第n个同级兄弟元素E。                     |
+| [E:empty](empty.htm)                     | CSS3   | 匹配没有任何子元素（包括text节点）的元素E。                 |
+| [E:checked](checked.htm)                 | CSS3   | 匹配用户界面上处于选中状态的元素E。(用于input type为radio与checkbox时) |
+| [E:enabled](enabled.htm)                 | CSS3   | 匹配用户界面上处于可用状态的元素E。                       |
+| [E:disabled](disabled.htm)               | CSS3   | 匹配用户界面上处于禁用状态的元素E。                       |
+| [E:target](target.htm)                   | CSS3   | 匹配相关URL指向的E元素。                           |
+| [@page:first](@page-first.htm)           | CSS2   | 设置页面容器第一页使用的样式。仅用于[@page](../../rules/@page.htm)规则 |
+| [@page:left](@page-left.htm)             | CSS2   | 设置页面容器位于装订线左边的所有页面使用的样式。仅用于[@page](../../rules/@page.htm)规则 |
+| [@page:right](@page-right.htm)           | CSS2   | 设置页面容器位于装订线右边的所有页面使用的样式。仅用于[@page](../../rules/@page.htm)规则 |
 
 ## 2、重点、难点知识讲解思路
 
-- ​
-- ​
-- ​
+- 3种引入方式，依次讲解
+- 三种样式选择器，依次讲解，要讲三种主要用途和场景
+- 背景属性：因为是组合属性，因此先给灌个概念，然后逐个边敲边讲解，最后小结一下。最后再提高一下，看个比较炫的当前流行的滚动视差示例，然后简单讲解一下用到的我们学过的知识点。
+- 表格属性：选引入到前面学过的表格，让大家把思想转到表格这儿，回想一下表格的一些东东。然后讲解表格的css属性。
+- 伪类样式（或伪类选择器），重点讲解一下<a>标签的示例，其它的简单讲解一下。
+- 举的新例子里面尽量再复习一下前面学过的比如 boder font font-size font-family等。
 
 ## 3、课堂补充案例
 
@@ -152,8 +201,10 @@
 ## 4、课堂提问准备
 
 - 推荐使用哪种css文件存放方式？
-- ​
+- 用css如何实现表格水平居中？
+- 用css如何实现表格垂直居中？
 
 ## 5、课后补充作业
 
-- ​
+- 用本课新学的知识，重新实现orilly前两个页面。
+
