@@ -1,4 +1,4 @@
-# Html表单和表单元素备课记录
+# w1d3-Html表单和表单元素备课记录
 
 ## 1、知识点梳理
 
@@ -25,16 +25,16 @@
 - ### 表单属性
 
 
-| accept                                   | *MIME_type*                         | HTML 5 中不支持。             |
-| ---------------------------------------- | ----------------------------------- | ------------------------ |
+| accept         | *MIME_type*                         | HTML 5 中不支持。             |
+| -------------- | ----------------------------------- | ------------------------ |
 | accept-charset | *charset_list*                      | 服务器可处理的表单数据字符集。          |
-| action | *URL*                               | 提交表单时向何处发送表单数据。          |
-| autocomplete                             | onoff                               | 是否启用表单的自动完成功能。           |
-| enctype                                  | 见下面说明                               | 在发送表单数据之前如何对其进行编码。       |
-| method                                   | getpost                             | 于发送 form-data 的 HTTP 方法。 |
-| name | 形象的名字如login-form                    | 表单的名称。                   |
-| novalidate | novalidate                          | 如果使用该属性，则提交表单时不进行验证。     |
-| target | _blank _self _parent _top framename | 规定在何处打开 action URL。      |
+| action         | *URL*                               | 提交表单时向何处发送表单数据。          |
+| autocomplete   | onoff                               | 是否启用表单的自动完成功能。           |
+| enctype        | 见下面说明                               | 在发送表单数据之前如何对其进行编码。       |
+| method         | getpost                             | 于发送 form-data 的 HTTP 方法。 |
+| name           | 形象的名字如login-form                    | 表单的名称。                   |
+| novalidate     | novalidate                          | 如果使用该属性，则提交表单时不进行验证。     |
+| target         | _blank _self _parent _top framename | 规定在何处打开 action URL。      |
 
 enctype常用取值
 

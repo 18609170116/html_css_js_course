@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .z1, .z2, .z3 {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            padding: 5px 10px;
+            color: #fff;
+            text-align: right;
+        }
+
+        .z1 {
+            z-index: 1;
+            background: black;
+        }
+        .z2{
+            z-index: 2;
+            background: #c00;
+            margin-top:30px;
+            margin-left:30px;
+        }
+        .z3{
+            z-index: 3;
+            background: #999;
+            margin-top:60px;
+            margin-left:60px;
+        }
+    </style>
+</head>
+<body>
+<h1>z-index属性</h1>
+<div class="z1">z-index1</div>
+<div class="z2">z-index2</div>
+<div class="z3">z-index3</div>
+</body>
+</html>

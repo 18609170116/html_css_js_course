@@ -7,7 +7,7 @@
         body{
             background:lightgray;
         }
-        .mydiv {
+        .mydiv1 {
             /*从上开始，顺时针旋转，分别是指上、右、下、左的值*/
             margin: 10px 10px 10px 50px;
             /*padding:30px 0 30px 0;*/
@@ -17,24 +17,76 @@
             font-family: "Microsoft YaHei UI";
             border: 2px solid #ff4fde;
             border-top: 4px dotted green;
+        }
+        .mydiv2{
+            width: 100px;
+            height:100px;
+            border:1px solid black;
+            float: left;
+            background-color: green;
+        }
 
+        .mydiv3{
+            width: 100px;
+            height:100px;
+            border:1px solid fuchsia;
+            background-color: blanchedalmond;
+            float: right;
+            text-align:center;
+            line-height: 100px;
+        }
+        .mydiv4{
+            width: 90px;
+            height:100px;
+            margin-right:8px;
+            background-color: white;
+            float: right;
+        }
+        .mydiv5{
+            width:90px;
+            height:100px;
+            margin-left:8px;
+            background:url("img/o1.gif") no-repeat;
+            float:left;
+        }
+        .div-center{
+            border:1px solid fuchsia;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 200px;
+            height: 300px;
+            margin-left:-100px;
+            margin-top:-150px;
+            background-color: burlywood;
+            z-index:-1;
         }
     </style>
 </head>
 <body>
-<div class="mydiv">
-    div盒子div盒子div盒子div盒子div盒子div盒子div盒子div盒子div盒子div盒子div盒子div盒子
-    div盒子div盒子
-    div盒子div盒子div盒子
-    div盒子
-    div盒子
 
-
-
-
-
-
-
+<div class="mydiv2">
+    div2
 </div>
+
+<div class="mydiv1">
+    div1div1div1div1div1div1div1div1div1div1div1div1div1div1div1div1div1div1div1div1div1div1
+    div1div1div1div1div1div1div1div1div1div1div1div1div1div1div1
+</div>
+
+<div class="mydiv3">
+    div3
+</div>
+
+<div class="div-center">
+    <div class="mydiv5">
+    </div>
+    <div class="mydiv4">
+        书名：SRE<br>
+        价格：￥20.00
+        div4
+    </div>
+</div>
+
 </body>
 </html>

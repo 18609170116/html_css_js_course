@@ -1,4 +1,4 @@
-# CSS第1课备课记录
+# w1d4-CSS作用，文本、字体属性、背景属性、列表属性、表格属性、伪类样式，三种基本样式规则、三种引入方式备课教案
 
 ## 1、知识点梳理
 
@@ -129,6 +129,13 @@
   语法：
   background : background-color || background-image || background-repeat || background-attachment || background-position 
   默认值为：transparent none repeat scroll 0% 0%。
+
+  常用：
+  background:url() no-repeat;
+  repeat:背景在x和y方向都重复
+  no-repeat:背景不重复
+  repeat-x:水平方向重复
+  repeat-y:垂直方向重复
   ```
 
   ### CSS列表属性
