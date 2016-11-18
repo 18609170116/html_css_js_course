@@ -114,7 +114,7 @@
 
   ### 2、字符串
 
-  ​	字符串是以单引号'或双引号"括起来的任意文本，比如`'abc'`，`"xyz"`等等。请注意，`''`或`""`本身只是一种表示方式，不是字符串的一部分，因此，字符串`'abc'`只有`a`，`b`，`c`这3个字符。
+  字符串是以单引号'或双引号"括起来的任意文本，比如`'abc'`，`"xyz"`等等。请注意，`''`或`""`本身只是一种表示方式，不是字符串的一部分，因此，字符串`'abc'`只有`a`，`b`，`c`这3个字符。
 
   ### 3、布尔值
 
@@ -216,37 +216,65 @@
   person.name; 		// 'Bob'
   person.zipcode; 	// null
   ```
-  ###由于javascript是动态语言，我们完全可以动态地对对象进行操作：
+  如果属性名包含特殊字符，比如有-号，就必须用`''`括起来。
+
+  访问这个属性也无法使用`.`操作符，必须用`['xxx']`来访问：
 
   ```
-  delete person.age; 	// 删除age属性
-  person.age			//undefined
+  var xiaohong = {
+      name: '小红', 
+      'middle-school': 'No.1 Middle School'
+  };
+  alert(xiaohong['middle-school']);
   ```
 
-  ### 但当对象的属性不是一个有效的变量比如middle-school时，就需要用 ' '括起来，访问时必须用[' ']
+  由于JavaScript的对象是动态类型，你可以自由地给一个对象添加或删除属性：
 
   ```
-  person['middle-school']='龙泉一中';
-  console.log(person['middle-school']);
+  var xiaoming = {
+      name: '小明'
+  };
+  xiaoming.age; // undefined
+  xiaoming.age = 18; // 新增一个age属性
+  xiaoming.age; // 18
+  delete xiaoming.age; // 删除age属性
+  xiaoming.age; // undefined
+  delete xiaoming['name']; // 删除name属性
+  xiaoming.name; // undefined
+  delete xiaoming.school; // 删除一个不存在的school属性也不会报错
   ```
 
   如果我们要检测`xiaoming`是否拥有某一属性，可以用`in`操作符：
 
   ```
-  'name' in person;
-  但是要小心，用in判断一个属性存在，这个属性不一定是person的，它可能是person继承得到的。如
-  'toString' in person;    //true
-  因为'toString'是定义在object对象中，而所有对象最终都会在原型链上指向object，所以person也拥有toString属性。
+  var xiaoming = {
+      name: '小明',
+      birth: 1990,
+      school: 'No.1 Middle School',
+      height: 1.70,
+      weight: 65,
+      score: null
+  };
+  'name' in xiaoming; // true
+  'grade' in xiaoming; // false
   ```
 
-  要判断一个属性是否是`person`自身拥有的，而不是继承得到的，可以用`hasOwnProperty()`方法：
+  不过要小心，如果`in`判断一个属性存在，这个属性不一定是`xiaoming`的，它可能是`xiaoming`继承得到的：
 
   ```
-  var person = {
+  'toString' in xiaoming; // true
+  ```
+
+  因为`toString`定义在`object`对象中，而所有对象最终都会在原型链上指向`object`，所以`xiaoming`也拥有`toString`属性。
+
+  要判断一个属性是否是`xiaoming`自身拥有的，而不是继承得到的，可以用`hasOwnProperty()`方法：
+
+  ```
+  var xiaoming = {
       name: '小明'
   };
-  person.hasOwnProperty('name'); // true
-  person.hasOwnProperty('toString'); // false
+  xiaoming.hasOwnProperty('name'); // true
+  xiaoming.hasOwnProperty('toString'); // false
   ```
 
 - ###变量
@@ -330,7 +358,6 @@
 
 -  已有对象 obj，如何判断obj是否是NaN?
 -  如果javascript代码未能如期实现功能或者没有响应，应该怎么调试？
--  由于疏忽，某个对象用的时候发现没有value属性，而对象的定义是别人做的，这时如何操作才能让该对象拥有value属性呢？另外，假如是no1-provider这个属性也没有呢？
 
 
 ## 5、课后补充作业

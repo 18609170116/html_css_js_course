@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32c8b503-a9b5-4dd9-b06c-fd2a90b22294" name="Default" comment="" />
+    <list default="true" id="32c8b503-a9b5-4dd9-b06c-fd2a90b22294" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/w1d6-example1.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w1d6-JavaScript基础语法及弹框方法备课记录.md" afterPath="$PROJECT_DIR$/w1d6-JavaScript基础语法及弹框方法备课记录.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w1d7-JavaScript中的内置对象和自定义对象、定时器、延时器.md" afterPath="$PROJECT_DIR$/w1d7-JavaScript中的内置对象和自定义对象、定时器、延时器.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="html_css_js_course.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,18 +27,7 @@
     <favorites_list name="html_css_js_course" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="w1d6-example1.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/w1d6-example1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,6 +56,7 @@
         <option value="$PROJECT_DIR$/w1d5-example2.html" />
         <option value="$PROJECT_DIR$/w1d5-example3.html" />
         <option value="$PROJECT_DIR$/w1d6-example1.html" />
+        <option value="$PROJECT_DIR$/w2d2-example.html" />
       </list>
     </option>
   </component>
@@ -141,6 +136,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="html_css_js_course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html_css_js_course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html_css_js_course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -225,12 +234,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479171587143</updated>
-      <workItem from="1479171588249" duration="40477000" />
+      <workItem from="1479171588249" duration="53823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40477000" />
+    <option name="totallyTimeSpent" value="53823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
@@ -284,7 +293,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -412,10 +423,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/w1d6-example1.html">
+    <entry file="file://$PROJECT_DIR$/w2d1-example1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="264">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/w2d2-example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
           <folding />
         </state>
       </provider>

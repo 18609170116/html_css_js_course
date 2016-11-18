@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //        var xm = {
+        //            name: '小明',
+        //            birth: 1990,
+        //            school: 'No.1 Middle School',
+        //            height: 1.70,
+        //            weight: 65,
+        //            score: null
+        //        };
+        //        console.log(xm.name);
+        //
+        //        delete xm.age;
+        //        console.log(xm.age);
+        //        xm['middle-school']='龙泉一中';
+        //        console.log(xm['middle-school']);
+
+
+        //        var o = {
+        //            name: 'Jack',
+        //            age: 20,
+        //            city: 'Beijing'
+        //        };
+        //
+        //        for (var key in o) {
+        //            //该属性是o对象的而不是继承过来的，还记得上一讲的内容吗？
+        //            if (o.hasOwnProperty(key)) {
+        //                //由于Array也是对象，而它的每个元素的索引被视为对象的属性
+        //                alert(key+'='+o[key]);
+        //            }
+        //        }
+        //
+        //
+        //        var re = /^[a-zA-Z0-9.]+@[a-z0-9]+.[a-z]{2,4}$/;
+        //        alert("正则表达式的值为："+re.test("lgmyg@hotmail.com"));
+
+
+        var xm2 = {
+            name: '小明',
+            age: 14,
+            gender: true,
+            height: 1.65,
+            grade: null,
+            'middle-school': '\"博为峰\" 软件技术公司',
+            skills: ['JavaScript', 'Java', 'Python', 'Lisp']
+        };
+
+        var xmStr = JSON.stringify(xm2);
+        //alert(xmStr);
+
+        var xmObj = JSON.parse(xmStr, function (key, value) {
+            //把名为“小明”的换成“小学同学”
+            if (key === 'name' && value === '小明') {
+                return value + "同学";
+            }
+            return value;
+        });
+        var s = JSON.stringify(xmObj);
+        alert(s);
+
+        //定时器
+        function hello() {
+            console.log('I am dada');
+            //alert('I am ' + name);
+            //setTimeout(arguments.callee,2000);
+        }
+        console.log("启动定时器");
+        setTimeout(hello, 5000);//5秒后执行
+    </script>
+</head>
+<body>
+asdfasdfasdfadsf
+</body>
+</html>
