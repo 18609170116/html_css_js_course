@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //'use strict';
+
+        //alert('window inner size:' + window.innerWidth +'x'+ window.innerHeight);
+        //window.open("http://www.baidu.com", '_blank', 'toolbar=yes,location=yes,status=yes,menubar=yes,schrollbars=yes,width=400,height=400');
+
+        /*
+         alert('appName = ' + navigator.appName + '\n' +
+         'appVersion = ' + navigator.appVersion + '\n' +
+         'language = ' + navigator.language + '\n' +
+         'platform = ' + navigator.platform + '\n' +
+         'userAgent = ' + navigator.userAgent);
+         */
+
+        /*
+         alert('protocol=' + location.protocol +
+         ' host=' + location.host +
+         ' port=' + location.port +
+         ' pathname=' + location.pathname +
+         ' search=' + location.search +
+         ' hash=' + location.hash);
+
+         */
+
+        /*
+         if (confirm('重新加载当前页 ' + location.href + '?')) {
+         location.reload();
+         } else {
+         location.assign('/discuss'); // 设置一个新的URL地址
+         }
+         */
+
+        //alert('person' && 'woman');
+
+        //document.title = "adsfasdfasdfasdf";
+
+
+        //window.onload是在dom文档树加载完和所有文件加载完之后执行一个函数。
+        window.onload=function(){
+            //第一种方法
+            /*
+             var menu = document.getElementById('drink');
+             console.log(menu.style);
+
+             var drinks = document.getElementsByTagName('dd');
+             for (var i = 0; i < drinks.length; i++) {
+             console.log(drinks[i].innerHTML);
+             }
+             */
+
+
+            // 第二种方法
+
+            /*
+            // 通过querySelector获取ID为q1的节点：
+            var dl = document.querySelector('#drink');
+            // 通过querySelectorAll获取q1节点内的符合条件的所有节点：
+            var dd = dl.querySelectorAll('dd');
+            for (var i = 0; i < dd.length; i++) {
+                console.log(dd[i].innerHTML);
+            }
+            */
+
+
+            var div1 = document.getElementById('div1');
+            div1.innerHTML=' div innerHTML';
+
+            var list = document.getElementById('list');
+            div1.innerHTML = 'div 移到这儿了';
+            list.appendChild(div1);
+
+            //更改style
+            var d = document.createElement('style');
+            d.setAttribute('type', 'text/css');
+            d.innerHTML = 'p { color: red }';
+            document.getElementsByTagName('head')[0].appendChild(d);
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+<dl id="drink" style="border:solid 1px #ccc;padding:6px;">
+    <dt>摩卡</dt>
+    <dd>热摩卡咖啡</dd>
+    <dt>酸奶</dt>
+    <dd>北京老酸奶</dd>
+    <dt>果汁</dt>
+    <dd>鲜榨苹果汁</dd>
+</dl>
+
+<p id="js">JavaScript</p>
+<div id="div1" style="border: 1px solid black;"></div>
+<div id="list" style="border: 2px dotted red">
+    <p id="java">Java</p>
+    <p id="python">Python</p>
+    <p id="scheme">Scheme</p>
+</div>
+
+</body>
+</html>

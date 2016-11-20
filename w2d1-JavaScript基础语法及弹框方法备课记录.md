@@ -277,7 +277,7 @@
   xiaoming.hasOwnProperty('toString'); // false
   ```
 
-- ###变量
+- ###**变量**
 
   变量的概念基本上和初中代数的方程变量是一致的，只是在计算机程序中，变量不仅可以是数字，还可以是任意数据类型。
 
@@ -340,6 +340,18 @@
   abc = 'Hello, world';
   alert(abc);
   ```
+
+- 弹窗
+
+  弹出让用户选择的窗口，如：
+
+```
+if (confirm('重新加载当前页' + location.href + '?')) {    //如果点“是”
+    location.reload();
+} else {												//如果点“否”
+    location.assign('/discuss'); // 设置一个新的URL地址
+}
+```
 
 ## 2、重点、难点知识讲解思路
 
@@ -405,3 +417,5 @@
 alert('person' && 'woman');
 alert('person' && 'woman' && 'boy');
 ```
+提示：&&符号的运算逻辑是，如果&&前边的结果为true（所有非空字符串轮换成布尔值时都为true）时，则跳到&&后边执行计算，并返回&&后边的值
+
