@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.11.3/jquery.js"></script>
+    <script>
+        /*
+         //三种方式都表示在文档加载后激活函数：
+         $(document).ready(function () {
+         alert('方式一：jQuery版本：' + $.fn.jquery);
+         });
+         $().ready(function(){
+         alert('方式二：jQuery版本：' + $.fn.jquery);
+         });
+         $(function(){
+         alert('方式三：jQuery版本：' + $.fn.jquery);
+         });
+         */
+
+        /*
+         //不会返回null或undefined
+         var div = $('#abc');
+         alert(div);
+         */
+
+        //层级选择器
+        //$('ul.lang li.lang-javascript'); // [<li class="lang-javascript">JavaScript</li>]
+        //$('div.testing li.lang-javascript'); // [<li class="lang-javascript">JavaScript</li>]
+
+
+        //练习２
+        $(function () {
+            var selected = $('ol.test-lang li.lang-c');
+
+            /*
+            var msg='';
+            $.each(selected,function (i) {
+                msg += 'class='+ selected[i].getAttribute('class')+",innerHTML="+selected[i].innerHTML +';\r';
+            })
+            alert(msg);
+            */
+
+            // 高亮结果:
+            if (!(selected instanceof jQuery)) {
+                return alert('不是有效的jQuery对象!');
+            }
+            selected.css('background-color', '#ffd351');
+        });
+
+
+    </script>
+</head>
+<body>
+<!-- HTML结构 -->
+<div class="test-selector">
+    <ul class="test-lang">
+        <li class="lang-javascript">JavaScript</li>
+        <li class="lang-python">Python</li>
+        <li class="lang-lua">Lua</li>
+    </ul>
+    <ol class="test-lang">
+        <li class="lang-swift">Swift</li>
+        <li class="lang-java">Java</li>
+        <li class="lang-c">C</li>
+    </ol>
+</div>
+
+</body>
+</html>

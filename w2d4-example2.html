@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-1.11.3/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#test-css li.dy>span').css('background-color', '#ffd351').css('color', 'red');
+            $('#test-css').dblclick(function () {
+                alert('adsfadsfasdf');
+            });
+            $('#test-css').mouseenter(function () {
+                //$('#test-css').css('background-color','blue');
+                $('#test-css').css({"border":"2px solid orange","padding":"10px 10px 10px 10px"});
+            });
+            $('#test-css').mouseleave(function () {
+                $('#test-css').css({"background-color":"white","border":"1px solid black"});
+            });
+
+            $('#test-css').mousemove(function (e) {
+                $('#msg').text('pageX = ' + e.pageX + ', pageY = ' + e.pageY);
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- HTML结构 -->
+<ul id="test-css" style="border: 1px dotted fuchsia;">
+    <li class="lang dy"><span>JavaScript</span></li>
+    <li class="lang"><span>Java</span></li>
+    <li class="lang dy"><span>Python</span></li>
+    <li class="lang"><span>Swift</span></li>
+    <li class="lang dy"><span>Scheme</span></li>
+</ul>
+
+mousemove:<label id="msg"></label>
+</body>
+</html>
