@@ -18,8 +18,17 @@
 
   但这是完全错误的理解。JavaScript确实很容易上手，但其精髓却不为大多数开发人员所熟知。编写高质量的JavaScript代码更是难上加难。
 
+  高大上的网页，对前端要求越来越高，没有javascript就没有那些精致体验的网页效果。
+
   一个合格的开发人员应该精通JavaScript和其他编程语言。如果你已经掌握了其他编程语言，或者你还什么都不会，请立刻开始学习JavaScript，不要被Web时代所淘汰。
+
   新兴的Node.js把JavaScript引入到了服务器端，JavaScript已经变成了全能型选手。
+
+  Hibird App开发，不会IOS、不会Android原生开发都不要紧，有js就够了。
+
+  微信小程序，又是一波大市场，离了js寸步难行。
+
+  网页游戏，flash、flex、同门兄弟ActionScript
   ```
 
 
