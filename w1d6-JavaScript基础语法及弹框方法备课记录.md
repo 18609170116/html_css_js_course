@@ -322,6 +322,10 @@
   alert(abc);
   ```
 
+
+
+> javascript知识库：http://lib.csdn.net/base/javascript
+
 ## 2、重点、难点知识讲解思路
 
 -    从javascript是什么，为什么学说起，引导学生了解javascript的强大功能和学好的必要性，通过例子快速入门，然后讲解2种引入方式，通过弹框示例，延伸到浏览器上的执行和调试，完了后正式开讲。
