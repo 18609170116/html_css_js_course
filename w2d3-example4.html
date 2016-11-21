@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function test1(){
+            //得到用户的内容
+            var content = document.getElementById("inputs").value;
+            //window.alert(content.value);
+            var myReg=/(\d){4}/;//这是一个正则表达式对象，可以检索4个连续的数字
+            var fourNumbers;
+            while(fourNumbers = myReg.exec(content)){
+                window.alert("找到："+fourNumbers[0]);
+            }
+        }
+    </script>
+</head>
+<body>
+<textarea id="inputs" rows="10" cols="20"></textarea>
+<input type="button" value="测试" onclick="test1()"/>
+</body>
+</html>
