@@ -7,6 +7,7 @@
 
 ```
 <table>…</table>                        定义表格
+<caption>...</caption>					表头
 <th>…</th>                              定义表格中的表头单元格
 <tr>…</tr>                              定义表格中的行
 <td>…</td>                              定义表格中的单元
