@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32c8b503-a9b5-4dd9-b06c-fd2a90b22294" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w1d2-Html表格、框架、视频、音频备课记录.md" afterPath="$PROJECT_DIR$/w1d2-Html表格、框架、视频、音频备课记录.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lesson_practice_2.html" afterPath="$PROJECT_DIR$/lesson_practice_2.html" />
-    </list>
+    <list default="true" id="32c8b503-a9b5-4dd9-b06c-fd2a90b22294" name="Default" comment="" />
     <ignored path="html_css_js_course.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -39,8 +36,8 @@
       <file leaf-file-name="lesson_practice_2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lesson_practice_2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="27" column="55" lean-forward="true" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -294,12 +291,12 @@
       <workItem from="1479629216865" duration="15578000" />
       <workItem from="1479689627251" duration="20358000" />
       <workItem from="1480035817325" duration="727000" />
-      <workItem from="1480383982911" duration="9804000" />
+      <workItem from="1480383982911" duration="9930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100670000" />
+    <option name="totallyTimeSpent" value="100796000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,9 +309,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -476,8 +473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lesson_practice_2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="27" column="55" lean-forward="true" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
           <folding>
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
