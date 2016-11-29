@@ -33,13 +33,14 @@ w3c推荐的并且已经是事实上的标准，各大浏览器都支持
 
 ```
 <html>…</html>         定义 HTML 页面，根标签
-<head>…</head>         页面头部
+<head>        页面头部
 <meta>                 HTML 页面的元信息
   html4:<meta content="text/html" http-equiv="Content-Type" charset="UTF-8"/>
   html5:<meta charset="UTF-8">
 <title>…</title>       文档的标题
 <link>                 引入外部资源（了解）
 <style>…</style>       引入外部样式（了解）
+</head> 
 <body>…</body>         页面体
 <!--…-->               注释
 ```
@@ -50,9 +51,11 @@ w3c推荐的并且已经是事实上的标准，各大浏览器都支持
 ```
 <h1>...</h1>           标题字大小（h1~h6）
 <p>                    段落
+
 <ul>…</ul>             无序列表 
 <ol>…</ol>             有序列表
 <li>…</li>             列表项目
+
 <a href=”…”>…</a>      超链接      文字超链接 图像超链接 锚点
 <b>...</b>             粗体字
 <strong>...</strong>   粗体字(强调) 

@@ -26,6 +26,8 @@ rowspan colspan
 	<frame src="middle.html" />
 	<frame src="right.html" />
 </frameset>
+
+请去掉<body>标签
 ```
 
 - ### 视频
