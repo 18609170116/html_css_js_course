@@ -31,7 +31,7 @@
 | action         | *URL*                               | 提交表单时向何处发送表单数据。          |
 | autocomplete   | onoff                               | 是否启用表单的自动完成功能。           |
 | enctype        | 见下面说明                               | 在发送表单数据之前如何对其进行编码。       |
-| method         | getpost                             | 于发送 form-data 的 HTTP 方法。 |
+| method         | get post                            | 于发送 form-data 的 HTTP 方法。 |
 | name           | 形象的名字如login-form                    | 表单的名称。                   |
 | novalidate     | novalidate                          | 如果使用该属性，则提交表单时不进行验证。     |
 | target         | _blank _self _parent _top framename | 规定在何处打开 action URL。      |
