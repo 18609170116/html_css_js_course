@@ -1,0 +1,19 @@
+
+/*作用于本页面所有p元素*/
+p {
+    font-size: 30px;
+    background-color: red;
+    width:120px;
+    border: 5px dotted orange;
+}
+
+/*定义一个class，意思为p元素的展示方式*/
+.p_element_show{
+    font-size: 20px;
+    background-color: blue;
+    width:80px;
+}
+
+.table_outer_border_style{
+    margin-top:-60px;
+}

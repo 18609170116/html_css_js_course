@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <!--&lt;!&ndash;第二种引入方式&ndash;&gt;-->
+    <!--<style type="text/css">-->
+    <!--/*作用于本页面所有p元素*/-->
+    <!--p {-->
+    <!--font-size: 30px;-->
+    <!--background-color: red;-->
+    <!--width:120px;-->
+    <!--border: 5px dotted orange;-->
+    <!--}-->
+
+    <!--/*定义一个class，意思为p元素的展示方式*/-->
+    <!--.p_element_show{-->
+    <!--font-size: 20px;-->
+    <!--background-color: blue;-->
+    <!--width:80px;-->
+    <!--}-->
+
+    <!--.table_outer_border_style{-->
+    <!--margin-top:100px;-->
+    <!--}-->
+    <!--</style>-->
+
+    <!--第三种引入方式-->
+    <link rel="stylesheet" type="text/css" href="css/orilly.css" />
 </head>
 <body style="margin: 0px 200px;">
 
-<table>
+<table class="table_outer_border_style">
     <!--头部-->
     <tr>
         <td colspan="5">
@@ -40,7 +65,7 @@
         <td style="width: 150px;">
             <table>
                 <tr style="font-size:14px;">
-                    浏览书目
+                    <p class="p_element_show">浏览书目</p>
                 </tr>
                 <tr style="font-size:13px;">
                     <td style="border-bottom: 1px solid #ccc;font-size: 13px;">苹果与Mac</td>
@@ -52,7 +77,8 @@
                     <td style="border-bottom: 1px solid #ccc;font-size: 13px;">认证与培训</td>
                 </tr>
                 <tr style="font-size:13px;">
-                    <td style="border-bottom: 1px solid #ccc;font-size: 13px;"数据</td>
+                    <td style="border-bottom: 1px solid #ccc;font-size: 13px;"><p>数据</p>
+                    </td>
                 </tr>
                 <tr style="font-size:13px;">
                     <td style="border-bottom: 1px solid #ccc;font-size: 13px;">设计与图形</td>
@@ -124,7 +150,9 @@
                     <td style="width:450px;font-size:13px;">
                         O'Reilly Media<br>
                         <h3>技术图书、技术会议、IT课程以及新闻</h3>
-                        O’Reilly 通过图书、在线服务、杂志、调查研究和会议等方式传播创新者的知识。自1978年开始 O’Reilly 一直都是发展前沿的见证者和推动者。超级极客正在开创未来，我们关注着真正重要的技术趋势，通过放大那些“微弱的信号”来刺激社会对新科技的采用。作为技术社区中活跃的参与者，O’Reilly 的发展充满着对创新的倡导、推波助澜和发扬光大。
+                        O’Reilly 通过图书、在线服务、杂志、调查研究和会议等方式传播创新者的知识。自1978年开始 O’Reilly
+                        一直都是发展前沿的见证者和推动者。超级极客正在开创未来，我们关注着真正重要的技术趋势，通过放大那些“微弱的信号”来刺激社会对新科技的采用。作为技术社区中活跃的参与者，O’Reilly
+                        的发展充满着对创新的倡导、推波助澜和发扬光大。
                     </td>
                 </tr>
             </table>
@@ -137,13 +165,14 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="http://www.oreilly.com.cn/images/bookcover/siteReliabilityEngineering_cvr_s.gif" />
+                        <img src="http://www.oreilly.com.cn/images/bookcover/siteReliabilityEngineering_cvr_s.gif"/>
                     </td>
                     <td colspan="2">《SRE：Google运维解密》<br>
                         Betsy Beyer 著<br>
                         孙宇聪 译<br>
                         2016年09月<br>
-                        定价：108.00元</td>
+                        定价：108.00元
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
