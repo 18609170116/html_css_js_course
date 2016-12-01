@@ -82,6 +82,7 @@
   .myclass{
     color:red
   }
+
   高级写法：
   .a.b{
     font-size:1em;
@@ -95,7 +96,7 @@
 
   ```
   color：
-  	3种设置方式,分别是内置/#435465/rgb(0-255,0-255,0-255)调和颜色
+  	3种设置方式,分别是内置/#ccccdd/rgb(0-255,0-255,0-255)调和颜色
   	
   font-size
   	设置字体大小
@@ -114,7 +115,7 @@
     center  :　 居中对齐 
     justify  :　 两端对齐 
 
-  text-decoration(underline,ling-through)
+  text-decoration(underline,line-through)
   	
   word-spacing
   ```
@@ -127,7 +128,7 @@
 
   ```
   语法：
-  background : background-color || background-image || background-repeat || background-attachment || background-position 
+  background : background-color  background-image  background-repeat  background-attachment  background-position 
   默认值为：transparent none repeat scroll 0% 0%。
 
   常用：
@@ -136,11 +137,39 @@
   no-repeat:背景不重复
   repeat-x:水平方向重复
   repeat-y:垂直方向重复
+
+  background-attachment属性：
+  设置图片的滚动属性
+  	scroll	背景图片随页面的其余部分滚动。这是默认
+  	fixed	背景图像是固定的
+  	inherit	指定background-attachment的设置应该从父元素继承
+  	local	背景图片随滚动元素滚动
+  	
+  background-position属性
+  设置背景图像的起始位置
+    1、内置
+    left top
+    left center
+    left bottom
+    right top
+    right center
+    right bottom
+    center top
+    center center
+    center bottom	如果仅指定一个关键字，其他值将会是"center"
+    2、百分比
+    x% y%	第一个值是水平位置，第二个值是垂直。左上角是0％ 0％。右下角是100％ 100％。如果仅指定了一个值，其他值将是50％。默认值为：0％0％
+    3、数值
+    xpos ypos	第一个值是水平位置，第二个值是垂直。左上角是0。单位可以是像素（0px0px）或任何其他 CSS单位。		如果仅指定了一个值，其他值将是50％。你可以混合使用％和positions
+    4、继承
+    inherit	指定background-position属性设置应该从父元素继承
   ```
 
   ### CSS列表属性
 
-  该属性是复合属性，看看各参数对应的属性
+  把图像设置为列表中的列表项目标记
+
+  > 该属性是复合属性，具体请查看 各参数对应的属性
 
   ```
   语法：
@@ -218,5 +247,5 @@
 
 ## 5、课后补充作业
 
-- 用本课新学的知识，重新实现orilly前两个页面。
+- 用本课新学的知识，重新实现前面做过的orilly的首页。
 

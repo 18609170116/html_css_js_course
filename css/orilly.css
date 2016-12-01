@@ -1,19 +1,70 @@
-
 /*作用于本页面所有p元素*/
-p {
-    font-size: 30px;
-    background-color: red;
-    width:120px;
-    border: 5px dotted orange;
-}
+/*p {*/
+    /*font-size: 30px;*/
+    /*background-color: red;*/
+    /*width: 120px;*/
+    /*border: 5px dotted orange;*/
+/*}*/
 
 /*定义一个class，意思为p元素的展示方式*/
-.p_element_show{
+.p_element_show {
     font-size: 20px;
     background-color: blue;
-    width:80px;
+    width: 80px;
 }
 
-.table_outer_border_style{
-    margin-top:-60px;
+.table_outer_border_style {
+    margin-top: 20px;
 }
+
+input {
+    border: 1px solid red;
+}
+
+.input_search_show {
+    border: 2px solid green;
+}
+
+.input_name_show {
+
+}
+
+.input_password_show {
+
+}
+
+/*id选择器*/
+#news_and_comments {
+    background-color:red;
+}
+
+/*class选择器*/
+.a{
+    background-color: #39f73b;
+}
+
+.b{
+    background-color: #999999;
+}
+
+.a.b{
+    border: 5px solid yellow;
+    font-size: 16px;
+    color:rgb(255,255,255);
+    font-style: oblique;
+}
+
+.label_style{
+    font-size: 50px;
+    font-weight:600;
+}
+
+.p-line-height-style{
+    font-size: 20px;
+    line-height: 20px;
+    text-align:left;
+    text-decoration: line-through;
+    text-line-through-color: red;
+    word-spacing: 100px;
+}
+/*CSS常用文本样式属性*/

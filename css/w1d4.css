@@ -2,18 +2,30 @@ p {
     background: darkgrey none no-repeat fixed;
 }
 
+/*.body_class{*/
+    /*background: url("../img/内容与样式分离.jpg") no-repeat fixed;*/
+/*}*/
+
 .mydiv1 {
-    background: url("../img/内容与样式分离.jpg") repeat fixed 4.1%;
+    width:1000px;
+    height:3400px;
+    border:1px solid green;
+    background: url("../img/内容与样式分离.jpg") ;
 }
 
 .mydiv2 {
-    background: url("../img/web服务器工作原理.jpg") repeat scroll 4.1%;
-    margin: 20px 20px 20px 20px;
+    background: url("../img/web服务器工作原理.jpg") no-repeat scroll 200px 200px;
+    /*margin: 20px 20px 20px 20px;*/
     border: 1px solid #000;
     width: 600px;
-    height: 4000px;
-    /*div居中*/
-    margin:0 auto;
+    height: 700px;
+    /*!*div居中*!*/
+    /*margin:0 auto;*/
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom:30px;
+    left: 30px;
 }
 
 /**为什么会出现两张图片呢？
