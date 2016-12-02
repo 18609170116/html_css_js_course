@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        h1 {
+            font-size: 16px;
+            font-family: Arial;
+        }
+
+        tr {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        .auto {
+            table-layout: auto;
+            border: 1px solid black;
+            width: 350px;
+            border-collapse: collapse;
+        }
+
+        .fixed {
+            table-layout: fixed;
+            border: 1px solid black;
+            width: 350px;
+            border-collapse: separate;
+            border-spacing: 10px 40px;
+            caption-side: bottom;
+            empty-cells: hide;
+            /*水平居中*/
+            margin: 0 auto;
+        }
+
+        .vertical-container {
+            width: 600px;
+            height: 400px;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
+        .vertical {
+            width: 200px;
+            height: 200px;
+            margin: -100px auto 0;
+            position: relative;
+            top: 100%;
+            border: 1px solid red;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="vertical"></div>
+</body>
+
+</html>

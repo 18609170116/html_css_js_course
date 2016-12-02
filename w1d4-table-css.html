@@ -9,25 +9,48 @@
             font-family: Arial;
         }
 
+        tr {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
         .auto {
             table-layout: auto;
+            border: 1px solid black;
             width: 350px;
             border-collapse: collapse;
         }
 
         .fixed {
             table-layout: fixed;
+            border: 1px solid black;
             width: 350px;
-            border-spacing: 10px 20px;
-            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 10px 40px;
             caption-side: bottom;
             empty-cells: hide;
+            /*水平居中*/
+            margin: 0 auto;
         }
+
+        .vertical-container{
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
     </style>
 </head>
+
 <body>
 <h1>auto: 表格自动算法</h1>
-<table border="1" class="auto">
+<table class="auto">
     <tbody>
     <tr>
         <td>表格自动算法，宽度将基于单元格的内容自动拉伸</td>
@@ -44,12 +67,12 @@
 <br>
 <br>
 <h1>fixed: 表格固定算法</h1>
-<table border="1" class="fixed">
+<table class="fixed">
     <caption style="font-size: 2em;font-family: 'Microsoft YaHei UI';">表1：表格示例</caption>
     <tbody>
     <tr>
         <td>表格固定算法</td>
-        <td>表格固定算法表格固定算法表格固定算法表格固定算法表格固定算法</td>
+        <td style="width: 20px;">表格固定算法表格固定算法表格固定算法表格固定算法表格固定算法</td>
         <td>表格固定算法</td>
     </tr>
     <tr>
@@ -64,5 +87,26 @@
     </tr>
     </tbody>
 </table>
+
+<div class="vertical-container">
+    asdlkjasdlkfda<br>
+    adsf<br>
+    asdf<br>
+    asdf<br>
+    asd<br>
+    fa<br>
+    sdf<br>
+    adfsfffadslkjdaslkjadlskfjlkjdsakljds<br>
+    adsfas<br>
+    df<br>
+    asdf<br>
+    sdaf<br>
+    asdf<br>
+    asd<br>
+    f<br>
+    asdf<br>
+    s<br>
+</div>
 </body>
+
 </html>
