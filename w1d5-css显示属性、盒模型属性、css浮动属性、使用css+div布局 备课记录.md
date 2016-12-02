@@ -33,8 +33,12 @@
   子元素选择器(以大于号分隔）        div > p
   相邻兄弟选择器（以加号分隔）       div + p
   普通兄弟选择器（以破折号分隔）     div ~ p
+
+
   ```
 
+
+> **以上四个选择器，都是从第一个元素开始向后匹配**
 
 - ### 盒子模型
 
@@ -71,7 +75,7 @@
 - ### CSS常用尺寸单位
 
   ```
-  px 像素 相对长度单位 相对于显示器屏幕分辩率而方言的
+  px 像素 相对长度单位 相对于显示器屏幕分辩率而言的
   pt Point 绝对长度单位 主要用来打印，字体适合使用pt
   em 相对长度单位 1em=16px 不是<em>标签哦
   %  百分比 相对长度单位
@@ -86,7 +90,7 @@
   ```
   好处：
   1、页面代码简洁
-  2、布局p容易、改版方便、样式定义灵活
+  2、布局容易、改版方便、样式定义灵活
   3、轻松的调你想要的网页风格
   4、代码易读、区块分明，强化代码重用
   ```
@@ -96,8 +100,12 @@
 
   ```
   position：static | relative | absolute | fixed | center | page | sticky
-  absolute:是相对于自己最近的有position属性的父元素来定位的,
-  	引处有个例子，div1 div2，当div2的position=absolute时，如果div1有position属性，则其定位由div1决定，否则，由div1的父元素也就是body来定位。
+
+  absolute:是相对于自己最近的position属性为非static的父元素来定位的,
+  	引处有个例子，div1 div2，当div2的position=absolute时，
+  	如果div1有position属性，则其定位由div1决定，
+  	否则，由div1的父元素也就是body来定位。
+  	
   relative:是相对于自己来定位的，可通过设置margin padding合理的值来演示。
   static:默认值，当设此值时，以下四个值top right bottom left均不起作用。
   ```

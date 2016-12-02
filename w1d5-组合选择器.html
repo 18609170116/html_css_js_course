@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        p {
+            background: #eee /*url("img/bg1.png")*/ repeat fixed 0% 1%;
+            border: 1px solid blueviolet;
+        }
+
+        /*E#id组合*/
+        p#special {
+            font-size: large;
+        }
+
+        p.special2 {
+            font-style: italic;
+        }
+
+        /*后代选择器 都是从当前匹配的第一个元素起，往后匹配，符合条件就应用样式*/
+        div p {
+            background-color: green;
+        }
+
+        /*子元素选择器(以大于号分隔）*/
+        td > textarea{
+            font-size:20px;
+        }
+
+
+        /*相邻兄弟选择器（以加号分隔）*/
+        div + p{
+            /*background-color: #cc0000;*/
+        }
+
+        /*普通兄弟选择器（以破折号分隔）*/
+        div ~ p{
+            background-color: #cc0000;
+        }
+
+        p ~ div{
+            background-color: yellow;
+        }
+
+        div{
+            width:300px;
+            height:200px;
+            border: 10px solid #5aff3c;
+            margin:20px 20px ;
+            padding: 5px 5px;
+            background-color:coral;
+            float:none;
+        }
+
+        blockquote{
+            background-color: #999;
+        }
+        address{
+            width:1366px;
+            height:100px;
+            margin:0px;
+            padding:0px;
+            border:0px;
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+组合选择器
+
+<p>adskadslfa</p>
+<p id="special">special</p>
+<p>div前面的p元素</p>
+
+<div>
+    <p>div中的p</p>
+    <table>
+        <tr>
+            <td>
+                <p>td中的p元素</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea>asdklfaldskflkjasdlkjfljkasdflkjasdlkjfkljasd;asdlkfasdlkjasdflk;asjdflkasdjfl</textarea>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>div后的p元素</p>
+<label>asdfasdfasdfasd</label>
+<p>相隔的P元素</p>
+
+
+<dl>
+    <dd>asdfasdf</dd>
+    <dd>asdfasdf</dd>
+    <dd>a777777777</dd>
+</dl>
+
+<blockquote>
+    blockquote
+</blockquote>
+
+<address>作者：某某某</address>
+</body>
+</html>

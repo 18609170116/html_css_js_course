@@ -4,63 +4,73 @@
     <meta charset="utf-8"/>
     <title></title>
     <style>
-        body{
-            background:lightgray;
+        body {
+            background: lightgray;
         }
+
         .mydiv1 {
             /*从上开始，顺时针旋转，分别是指上、右、下、左的值*/
             margin: 10px 10px 10px 50px;
             /*padding:30px 0 30px 0;*/
-            padding:30px 10px;
-            background:greenyellow;
+            padding: 30px 10px;
+            background: greenyellow;
             font-size: 2em;
             font-family: "Microsoft YaHei UI";
             border: 2px solid #ff4fde;
             border-top: 4px dotted green;
+            overflow-x: hidden;
         }
-        .mydiv2{
+
+        .mydiv2 {
             width: 100px;
-            height:100px;
-            border:1px solid black;
+            height: 100px;
+            border: 1px solid black;
             float: left;
             background-color: green;
         }
 
-        .mydiv3{
+        .mydiv3 {
             width: 100px;
-            height:100px;
-            border:1px solid fuchsia;
+            height: 100px;
+            border: 1px solid fuchsia;
             background-color: blanchedalmond;
             float: right;
-            text-align:center;
+            /*水平居中*/
+            text-align: center;
+            /*单行文字时的垂直居中*/
             line-height: 100px;
         }
-        .mydiv4{
+
+        .mydiv4 {
             width: 90px;
-            height:100px;
-            margin-right:8px;
+            height: 100px;
+            margin-right: 8px;
             background-color: white;
             float: right;
         }
-        .mydiv5{
-            width:90px;
-            height:100px;
-            margin-left:8px;
-            background:url("img/o1.gif") no-repeat;
-            float:left;
+
+        .mydiv5 {
+            width: 90px;
+            height: 100px;
+            margin-left: 8px;
+            background: url("img/o1.gif") no-repeat;
+            float: left;
         }
-        .div-center{
-            border:1px solid fuchsia;
+
+        /*div垂直和水平居中*/
+        .div-center {
+            border: 1px solid fuchsia;
             position: absolute;
             left: 50%;
             top: 50%;
             width: 200px;
             height: 300px;
-            margin-left:-100px;
-            margin-top:-150px;
+            margin-left: -100px;
+            margin-top: -150px;
             background-color: burlywood;
-            z-index:-1;
+            z-index: 99999;
         }
+
     </style>
 </head>
 <body>
@@ -75,7 +85,7 @@
 </div>
 
 <div class="mydiv3">
-    div3
+    div3单行文字
 </div>
 
 <div class="div-center">
