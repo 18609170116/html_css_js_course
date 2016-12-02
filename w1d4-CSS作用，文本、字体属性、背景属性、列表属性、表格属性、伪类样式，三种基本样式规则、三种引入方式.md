@@ -28,7 +28,7 @@
 
 - ### css写到哪里
 
-  写到style里面（不建议）
+  写到style里面（不建议）也叫行内样式
 
   ```
   <p style="color:red;">style示例</p>
@@ -173,7 +173,7 @@
 
   ```
   语法：
-  list-style : list-style-image || list-style-position || list-style-type 
+  list-style：<' list-style-type '> || <' list-style-position '> || <' list-style-image '>
   ```
 
   ### CSS表格属性
