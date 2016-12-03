@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style rel="stylesheet" type="text/css">
+
+        .leftPanel {
+            width: 300px;
+            height: 600px;
+            border: 1px solid #ccc;
+            float:left;
+            margin-right:20px;
+        }
+
+        .contentPanel {
+            width: 800px;
+            height: 600px;
+            border: 1px solid #ccc;
+            float:left;
+        }
+    </style>
+
+    <script src="js/jquery-1.11.3/jquery.js"></script>
+    <script>
+
+        //成功时设置目标div的内容
+        function success(text, target) {
+            $(target).html(text);
+        }
+
+        //出错时的处理
+        function fail(code, target) {
+            $(target).html('Error code: ' + code);
+        }
+
+        //构造访问路径
+        function consPath(file) {
+            var path = "http://";
+            path = path + window.location.host;
+            var pathname = window.location.pathname;
+            path = path + pathname.substr(0, pathname.lastIndexOf("/")) + "/" + file;
+            return path;
+        }
+
+        //获取file内容，并显示在id为target的元素中
+        function getContent(file, target) {
+            file = consPath(file);
+            var request = new XMLHttpRequest(); // 新建XMLHttpRequest对象
+            request.onreadystatechange = function () { // 状态发生变化时，函数被回调
+                if (request.readyState === 4) { // 成功完成
+                    // 判断响应结果:
+                    if (request.status === 200) {
+                        // 成功，通过responseText拿到响应的文本:
+                        return success(request.responseText, target);
+                    } else {
+                        // 失败，根据响应码判断失败原因:
+                        return fail(request.status);
+                    }
+                } else {
+                    // HTTP请求还在继续...
+                }
+            }
+            // 发送请求:
+            request.open('GET', file);
+            request.send();
+        }
+
+    </script>
+</head>
+<body>
+<div class="leftPanel">
+    <a href="#" onclick="getContent('content.html','#target')">点我会把我超链的内容显示在下面的div中</a>
+</div>
+
+<div class='contentPanel' id="target"></div>
+
+</body>
+</html>
