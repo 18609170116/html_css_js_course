@@ -65,6 +65,9 @@
       x = 1;
       y = 2;
       z = 3;
+      if(z==3){
+        alert("z==3");
+      }
   }
   {}的嵌套
 
@@ -86,6 +89,8 @@
   声明多个：var i,j;
   不建议一行声明多个变量，像下面这样：
   var i=1;var j=5;
+
+  小练习：定义2个变量，值分别为2个数字，将这两个值加起来并输出到控制台
   ```
 
 - ### 数据类型
@@ -108,7 +113,7 @@
   (1 + 2) * 5 / 2; 		// 7.5
   2 / 0; 					// Infinity
   0 / 0; 					// NaN
-  10 % 3; 				// 1
+  10 % 3; 				// 1 模
   10.5 % 3; 				// 1.5
   ```
 
@@ -140,7 +145,8 @@
 - ### 比较运算符
 
   ```
-  2 > 5; // false
+  2 > 5; // false 
+  2 < 5  //true
   5 >= 2; // true
   7 == 7; // true
 
@@ -198,13 +204,19 @@
   JavaScript的对象是一组由键-值组成的无序集合，例如：
 
   ```
+  var phoneNumber1 = {
+    number：'1378598595',
+    guishudi:'成都'
+  }
+
   var person = {
       name: 'Bob',
       age: 20,
       tags: ['js', 'web', 'mobile'],
       city: 'Beijing',
       hasCar: true,
-      zipcode: null
+      zipcode: null,
+      phoneNumber:phoneNumber1
   };
   ```
 
@@ -275,6 +287,17 @@
   };
   xiaoming.hasOwnProperty('name'); // true
   xiaoming.hasOwnProperty('toString'); // false
+
+  小练习：
+  定义一个user对象，有以下属性：
+  1
+  username
+  password
+  binding-phone-number
+  delivery-address
+  2、并判断其有没有username和toString属性
+  3、给user赋值年龄22岁并输出年龄
+  4、输出一下user的toString，看是什么效果
   ```
 
 - ###**变量**
@@ -302,16 +325,7 @@
   a='who am i?';		// a变为字符串
   ```
 
-  > 这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。静态语言在定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。例如Java是静态语言，赋值语句如下：
-
-  ```
-  int a = 123; 		// a是整数类型变量，类型用int申明
-  a='who am i?'; 		// 错误：不能把字符串赋给整型变量
-  ```
-
-  > 和静态语言相比，动态语言更灵活，就是这个原因。
-  >
-  > 请不要把赋值语句的等号等同于数学的符号。赋值是指从把等号右边的值赋值左边变量。
+  ​
 
 - ### strict模式
 
@@ -378,7 +392,7 @@ if (confirm('重新加载当前页' + location.href + '?')) {    //如果点“�
 
 2、逐个复习本课要点，要有练习，并上传练习。
 
-3、下面这段代码，执行结果是怎么样的？
+3、下面这段代码，执行结果是怎么样的？为什么？
 
 ```
 <!DOCTYPE html>
