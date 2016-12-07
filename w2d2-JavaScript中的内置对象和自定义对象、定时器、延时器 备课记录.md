@@ -16,7 +16,7 @@ if (age >= 18) { // 如果age >= 18为true，则执行if语句块
   >
   > 2、`if...else...`语句的执行特点是二选一，在多个`if...else...`语句中，如果某个条件成立，则后续就不再继续判断了。
   >
-  > 3、JavaScript把`null`、`undefined`、`0`、`NaN`和空字符串`''`视为`false`，其他值一概视为`true`。
+  > 3、JavaScript把`null`、`undefined`、`0`、`NaN`和空字符串`''` ""视为`false`，其他值一概视为`true`。
 
 ### 1.2 循环
 
@@ -59,6 +59,7 @@ var o = {
     age: 20,
     city: 'Beijing'
 };
+
 for (var key in o) {
 	//该属性是o对象的而不是继承过来的，还记得上一讲的内容吗？
     if (o.hasOwnProperty(key)) {
@@ -80,6 +81,8 @@ while (n > 0) {
     n = n - 2;
 }
 console.log(x); // 2500
+
+小练习：用while循环计算1+2+...+100的值
 ```
 
 ### 1.6 do...while:
@@ -144,6 +147,7 @@ now.getTime(); 			// 1435146562875, 以number形式表示的时间戳
 如果要创建一个指定日期和时间的Date对象，可以用：
 var d = new Date(2015, 5, 19, 20, 15, 30, 123);
 d; // Fri Jun 19 2015 20:15:30 GMT+0800 (CST)
+
 或者
 var d = Date.parse('2015-06-24T19:49:22.875+08:00');
 d; // 1435146562875
@@ -207,7 +211,7 @@ re.test('010 12345'); // false
 var re = /^[a-zA-Z0-9.]+@[a-z0-9]+.[a-z]{2,4}$/;
 ```
 
-​
+
 
 > ### 常用的正则表达式
 >
@@ -240,7 +244,7 @@ object：就是JavaScript的{ ... }表示方式。
 
 javascript对JSON有2种处理方式：
 
-**序列化：**
+#### 1.10.1 序列化：
 
 就是把javascript的Object对象变成string
 
@@ -277,7 +281,7 @@ JSON.stringify(xiaoming);
 }
 ```
 
-### 反序列化：
+#### 1.10.1 反序列化：
 
 把json字符串变成javascript对象
 
@@ -298,7 +302,7 @@ JSON.parse('{"name":"小明","age":14}', function (key, value) {
 ```
 ### 1.11 函数
 
-### 函数的定义
+#### 1.11 .1 函数的定义
 
 在JavaScript中，定义函数的方式如下：
 
@@ -335,7 +339,7 @@ var abs = function (x) {
 
 上述两种定义*完全等价*，注意第二种方式按照完整语法需要在函数体末尾加一个`;`，表示赋值语句结束。
 
-### 1.12 函数调用
+#### 1.11 .2 函数调用
 
 调用函数时，按顺序传入参数即可：
 
@@ -343,33 +347,31 @@ var abs = function (x) {
 abs(10); // 返回10
 ```
 
-- ### 定时器和延时器
+### 1.12 定时器和延时器
 
-  执行一次
+执行一次
 
-  ```
-  function hello (){
-      console.log('延时器执行');
-  }
-  setTimeout(hello,5000);//5秒后执行
-  ```
+```
+function hello (){
+    console.log('延时器执行');
+}
+setTimeout(hello,5000);//5秒后执行
+```
 
-  执行多次
+执行多次
 
-  ```
-  function hello (){
-      console.log('定时器执行');
-  }
-  setInterval(hello,5000);//5秒后执行
+```
+function hello (){
+    console.log('定时器执行');
+}
+setInterval(hello,5000);//5秒后执行
 
-  或者下面这样，使用匿名函数方式
-  setInterval(function(){
-      console.log('定时器执行');
-  },200);
-  ```
-
-
-### 1.13 方法
+或者下面这样，使用匿名函数方式
+setInterval(function(){
+    console.log('定时器执行');
+},200);
+```
+### 1.14 方法
 
   定义在对象内部的函数叫方法。
 
