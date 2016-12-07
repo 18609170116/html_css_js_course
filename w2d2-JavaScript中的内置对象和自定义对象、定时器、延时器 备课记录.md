@@ -162,14 +162,14 @@ d.toUTCString(); // 'Wed, 24 Jun 2015 11:49:22 GMT'，UTC时间，与本地时�
 ```
 ### 1.9 RegExp
 
-如何判断一个字符串是合法的email呢？有很多种办法，但使用正则表达式是最有效的解决这种匹配问题的办法。
+如何判断一个字符串是合法的email呢？有很多种办法，但使用正则表达式是最有效的解决这种匹配问题的方法。
 
 因为正则表达式也是用字符串表示的，所以，我们要首先了解如何用字符来描述字符。
 
 ```
-\d 		1个数字
-\w 		一个字母或数字
-\s		匹配1个空格，包括Tab
+\d 		1个数字 digital
+\w 		一个字母或数字 word
+\s		匹配1个空格，包括Tab space
 .		匹配任意字符，但不能匹配换行符
 *		任意个字符
 + 		至少一个字符
@@ -187,6 +187,9 @@ $		表示行的结束，\w$表示必须以数字或字母结束。
 
 ```
 ^\d{3}\s+\d{3,8}$,它匹配的是什么呢？
+028 -119
+028 -96516
+028 -88888888
 ```
 
 javascript中创建正则表达式的方法有2种：
@@ -246,7 +249,7 @@ javascript对JSON有2种处理方式：
 
 #### 1.10.1 序列化：
 
-就是把javascript的Object对象变成string
+就是把javascript的Object对象变成json string
 
 ```
 var xiaoming = {
@@ -300,6 +303,8 @@ JSON.parse('{"name":"小明","age":14}', function (key, value) {
     return value;
 }); // Object {name: '小明同学', age: 14}
 ```
+> 请同学们动手练习JSON序列化和反序列化的方法10分钟。
+
 ### 1.11 函数
 
 #### 1.11 .1 函数的定义
@@ -311,7 +316,7 @@ function abs(x) {
     if (x >= 0) {
         return x;
     } else {
-        return -x;
+        return "asdfasdfas";
     }
 }
 ```
@@ -345,6 +350,8 @@ var abs = function (x) {
 
 ```
 abs(10); // 返回10
+小练习：写一个函数，我们去购物，如果支付额度大于1000，5折优惠。函数返回值为打折后数值。
+discount 折扣
 ```
 
 ### 1.12 定时器和延时器
@@ -352,8 +359,8 @@ abs(10); // 返回10
 执行一次
 
 ```
-function hello (){
-    console.log('延时器执行');
+var hello=function (){
+    console.log('hello,延时器执行');
 }
 setTimeout(hello,5000);//5秒后执行
 ```
@@ -370,6 +377,8 @@ setInterval(hello,5000);//5秒后执行
 setInterval(function(){
     console.log('定时器执行');
 },200);
+
+思考一下：如果执行3次，怎么写呢？
 ```
 ### 1.14 方法
 
@@ -429,7 +438,7 @@ var arr = ['Bart', 'Lisa', 'Adam','小明'];
 
 ## 5、课后补充作业
 
-1、小明身高1.75，体重80.5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数：
+1、小明身高1.75，体重80.5kg。请根据BMI公式（体重(单位：千克)除以身高（单位：米）的平方）帮小明计算他的BMI指数，并根据BMI指数：
 
 - 低于18.5：过轻
 - 18.5-25：正常
@@ -467,7 +476,7 @@ if (today.getMonth() === 2 && today.getDate() === 14) {
 ```
 use strict';
 function area_of_circle(r, pi) {
-  
+  //请输入代码
 }
 // 测试:
 if (area_of_circle(2) === 12.56 && area_of_circle(2, 3.1416) === 12.5664) {
