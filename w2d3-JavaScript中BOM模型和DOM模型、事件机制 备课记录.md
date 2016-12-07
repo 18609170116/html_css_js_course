@@ -4,7 +4,7 @@
 
 前面我们比较完整地学习了javascript的语法，使用等等，本章主要讲解使用javascript操作浏览器，以达到实现动态、酷炫、高大上的前面展示效果。
 
-## BOM模型
+## 1.1 BOM模型
 
 是browser object model的缩写，简称浏览器对象模型。
 
@@ -12,7 +12,7 @@ BOM提供了独立于内容而与浏览器窗口进行交互的对象。用来�
 
  ![bom_and_dom](img\bom_and_dom.png)
 
-## DOM模型
+## 1.2 DOM模型
 
 是document object model的缩写, 简称文档对象模型。是w3c规定的三类DOM标准接口，用来获取或设置文档中标签的属性，例如获取或者设置input表单的value值。
 
@@ -20,9 +20,9 @@ BOM提供了独立于内容而与浏览器窗口进行交互的对象。用来�
 > - XML DOM Java OOP学过，专用于XML文档
 > - HTML DOM 专用于HTML文档
 >
-> 
+>
 
-## 操作BOM对象
+## 1.3 操作BOM对象
 
 ### 1、window对象
 
@@ -150,7 +150,7 @@ JavaScript可以通过`document.cookie`读取到当前页面的Cookie：
 document.cookie; 	// 'v=123; remember=true; prefer=zh'
 ```
 
-## 操作DOM对象
+## 1.4 操作DOM对象
 
 由于HTML文档被浏览器解析后就是一棵DOM树，要改变HTML的结构，就需要通过JavaScript来操作DOM。
 
@@ -314,7 +314,7 @@ removed === self; // true
 
 注意到删除后的节点虽然不在文档树中了，但其实它还在内存中，可以随时再次被添加到别的位置。
 
-## 事件机制
+## 1.5 事件机制
 
 很久以前有个叫Netscape的姑娘，她制订了Javascript的一套事件驱动机制（即事件捕获）
 
@@ -376,6 +376,10 @@ removed === self; // true
 </html>
 ```
 
+> 对javascript事件运行机制有兴趣的同学，可以看看这篇文章：
+>
+> http://www.ruanyifeng.com/blog/2014/10/event-loop.html
+
 ## 常用事件
 
 所有的事件都会触发并调用1个或多个函数
@@ -383,7 +387,7 @@ removed === self; // true
 onclick事件
 
 ```
-<form name="form1" action="" method="post">  
+<form name="form1" action="#" method="post">  
     <input type="button" name="button1"  value="点击"  onclick="a()" /> //点击按钮时弹出警告框  
 </form>
 ```
@@ -502,7 +506,7 @@ if (!js || js.innerText !== 'JavaScript') {
 
 -  ​
 
-   ​
+    ​
 
 
 # 5、课后补充作业
