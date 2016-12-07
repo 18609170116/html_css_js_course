@@ -2,103 +2,98 @@
 
 ## 1、知识点梳理
 
-- ### 条件判断
+### 1.1 条件判断
 
-  ```
-  var age = 20;
-  if (age >= 18) { // 如果age >= 18为true，则执行if语句块
-      alert('adult');
-  } else { // 否则执行else语句块
-      alert('teenager');
-  }
-  ```
-
-
+```
+var age = 20;
+if (age >= 18) { // 如果age >= 18为true，则执行if语句块
+    alert('adult');
+} else { // 否则执行else语句块
+    alert('teenager');
+}
+```
   > 1、尽量不要省略{}
   >
   > 2、`if...else...`语句的执行特点是二选一，在多个`if...else...`语句中，如果某个条件成立，则后续就不再继续判断了。
   >
   > 3、JavaScript把`null`、`undefined`、`0`、`NaN`和空字符串`''`视为`false`，其他值一概视为`true`。
 
+### 1.2 循环
 
-- ### 循环
+有四种循环，分别是 for , for ... in, while , do... while
 
-  有四种循环，分别是 for , for ... in, while , do... while
+### 1.3 for循环：
 
-  **for循环：**
+`for`循环最常用的地方是利用索引来遍历数组：
 
-  `for`循环最常用的地方是利用索引来遍历数组：
+```
+var arr = ['Apple', 'Google', 'Microsoft'];
+var i, x;
+for (i=0; i<arr.length; i++) {
+    x = arr[i];
+    alert(x);
+}
+```
 
-  ```
-  var arr = ['Apple', 'Google', 'Microsoft'];
-  var i, x;
-  for (i=0; i<arr.length; i++) {
-      x = arr[i];
-      alert(x);
-  }
-  ```
+`for`循环的3个条件都是可以省略的，如果没有退出循环的判断条件，就必须使用`break`语句退出循环，否则就是死循环：
 
-  `for`循环的3个条件都是可以省略的，如果没有退出循环的判断条件，就必须使用`break`语句退出循环，否则就是死循环：
+```
+var x = 0;
+for (;;) { // 将无限循环下去
+    if (x > 100) {
+        break; // 通过if判断来退出循环
+    }
+    x ++;
+}
+```
 
-  ```
-  var x = 0;
-  for (;;) { // 将无限循环下去
-      if (x > 100) {
-          break; // 通过if判断来退出循环
-      }
-      x ++;
-  }
-  ```
+### 1.4 for ... in:
 
-  **for ... in:**
+`for`循环的一个变体是`for ... in`循环，它可以把一个对象的所有属性依次循环出来：
 
-  `for`循环的一个变体是`for ... in`循环，它可以把一个对象的所有属性依次循环出来：
+`还记得上节课讲对象的时候说的in是做什么的吗？`
 
-  `还记得上节课讲对象的时候说的in是做什么的吗？`
+```
+var o = {
+    name: 'Jack',
+    age: 20,
+    city: 'Beijing'
+};
+for (var key in o) {
+	//该属性是o对象的而不是继承过来的，还记得上一讲的内容吗？
+    if (o.hasOwnProperty(key)) {
+    	//由于Array也是对象，而它的每个元素的索引被视为对象的属性
+        alert(key+'='+o[key]); 
+    }
+}
+```
 
-  ```
-  var o = {
-      name: 'Jack',
-      age: 20,
-      city: 'Beijing'
-  };
-  for (var key in o) {
-  	//该属性是o对象的而不是继承过来的，还记得上一讲的内容吗？
-      if (o.hasOwnProperty(key)) {
-      	//由于Array也是对象，而它的每个元素的索引被视为对象的属性
-          alert(key+'='+o[key]); 
-      }
-  }
-  ```
+### 1.5 while:
 
-  **while:**
+`while`循环只有一个判断条件，条件满足，就不断循环，条件不满足时则退出循环。比如我们要计算100以内所有奇数之和，可以用while循环实现：
 
-  `while`循环只有一个判断条件，条件满足，就不断循环，条件不满足时则退出循环。比如我们要计算100以内所有奇数之和，可以用while循环实现：
+```
+var x = 0;
+var n = 99;
+while (n > 0) {
+    x = x + n;
+    n = n - 2;
+}
+console.log(x); // 2500
+```
 
-  ```
-  var x = 0;
-  var n = 99;
-  while (n > 0) {
-      x = x + n;
-      n = n - 2;
-  }
-  console.log(x); // 2500
-  ```
+### 1.6 do...while:
 
-  **do...while:**
+最后一种循环是`do { ... } while()`循环，它和`while`循环的唯一区别在于，不是在每次循环开始的时候判断条件，而是在每次循环完成的时候判断条件：
 
-  最后一种循环是`do { ... } while()`循环，它和`while`循环的唯一区别在于，不是在每次循环开始的时候判断条件，而是在每次循环完成的时候判断条件：
-
-  ```
-  var n = 0;
-  do {
-      n = n + 1;
-  } while (n < 100);
-  n; // 100
-  ```
-
-- ###内置对象
-
+```
+var n = 0;
+do {
+    n = n + 1;
+} while (n < 100);
+n; // 100
+```
+###1.7 内置对象
 
   在JavaScript的世界里，一切都是对象。
 
@@ -122,234 +117,231 @@
   >
   > 特别注意`null`的类型是`object`，`Array`的类型也是`object`，因此我们用`typeof`将无法区分出`null`、`Array`和通常意义上的object——`{}`。
 
+### 1.8 常用的内置对象
 
-- ### 常用的内置对象
+所有编程语言都具有内部（或内置的）对象来创建语言的基本功能。内部对象是编写自定义代码所用语言的基础。
 
-  所有编程语言都具有内部（或内置的）对象来创建语言的基本功能。内部对象是编写自定义代码所用语言的基础。
+javascript中的内置对象主要有Number、Boolean、String、Date、Array、Math等。
 
-  javascript中的内置对象主要有Number、Boolean、String、Date、Array、Math等。
+#### 1.8.1 Date对象
 
-  ### Date对象
+在JavaScript中，Date对象用来表示日期和时间。
 
-  在JavaScript中，Date对象用来表示日期和时间。
+```
+要获取系统当前时间，用：
+var now = new Date();
+now; 					// Wed Jun 24 2015 19:49:22 GMT+0800 (CST)
+now.getFullYear(); 		// 2015, 年份
+now.getMonth(); 		// 5, 月份，注意月份范围是0~11，5表示六月
+now.getDate(); 			// 24, 表示24号
+now.getDay(); 			// 3, 表示星期三
+now.getHours(); 		// 19, 24小时制
+now.getMinutes(); 		// 49, 分钟
+now.getSeconds(); 		// 22, 秒
+now.getMilliseconds(); 	// 875, 毫秒数
+now.getTime(); 			// 1435146562875, 以number形式表示的时间戳
 
-  ```
-  要获取系统当前时间，用：
-  var now = new Date();
-  now; 					// Wed Jun 24 2015 19:49:22 GMT+0800 (CST)
-  now.getFullYear(); 		// 2015, 年份
-  now.getMonth(); 		// 5, 月份，注意月份范围是0~11，5表示六月
-  now.getDate(); 			// 24, 表示24号
-  now.getDay(); 			// 3, 表示星期三
-  now.getHours(); 		// 19, 24小时制
-  now.getMinutes(); 		// 49, 分钟
-  now.getSeconds(); 		// 22, 秒
-  now.getMilliseconds(); 	// 875, 毫秒数
-  now.getTime(); 			// 1435146562875, 以number形式表示的时间戳
+如果要创建一个指定日期和时间的Date对象，可以用：
+var d = new Date(2015, 5, 19, 20, 15, 30, 123);
+d; // Fri Jun 19 2015 20:15:30 GMT+0800 (CST)
+或者
+var d = Date.parse('2015-06-24T19:49:22.875+08:00');
+d; // 1435146562875
+但它返回的不是Date对象，而是一个时间戳。不过有时间戳就可以很容易地把它转换为一个Date：
+var d = new Date(1435146562875);
+d; // Wed Jun 24 2015 19:49:22 GMT+0800 (CST)
 
-  如果要创建一个指定日期和时间的Date对象，可以用：
-  var d = new Date(2015, 5, 19, 20, 15, 30, 123);
-  d; // Fri Jun 19 2015 20:15:30 GMT+0800 (CST)
-  或者
-  var d = Date.parse('2015-06-24T19:49:22.875+08:00');
-  d; // 1435146562875
-  但它返回的不是Date对象，而是一个时间戳。不过有时间戳就可以很容易地把它转换为一个Date：
-  var d = new Date(1435146562875);
-  d; // Wed Jun 24 2015 19:49:22 GMT+0800 (CST)
+Date对象表示的时间总是按浏览器所在时区显示的，不过我们既可以显示本地时间，也可以显示调整后的UTC时间：
+var d = new Date(1435146562875);
+d.toLocaleString(); // '2015/6/24 下午7:49:22'，本地时间（北京时区+8:00），显示的字符串与操作系统设定的格式有关
+d.toUTCString(); // 'Wed, 24 Jun 2015 11:49:22 GMT'，UTC时间，与本地时间相差8小时
+```
+### 1.9 RegExp
 
-  Date对象表示的时间总是按浏览器所在时区显示的，不过我们既可以显示本地时间，也可以显示调整后的UTC时间：
-  var d = new Date(1435146562875);
-  d.toLocaleString(); // '2015/6/24 下午7:49:22'，本地时间（北京时区+8:00），显示的字符串与操作系统设定的格式有关
-  d.toUTCString(); // 'Wed, 24 Jun 2015 11:49:22 GMT'，UTC时间，与本地时间相差8小时
-  ```
+如何判断一个字符串是合法的email呢？有很多种办法，但使用正则表达式是最有效的解决这种匹配问题的办法。
 
-- ### RegExp
+因为正则表达式也是用字符串表示的，所以，我们要首先了解如何用字符来描述字符。
 
-  如何判断一个字符串是合法的email呢？有很多种办法，但使用正则表达式是最有效的解决这种匹配问题的办法。
+```
+\d 		1个数字
+\w 		一个字母或数字
+\s		匹配1个空格，包括Tab
+.		匹配任意字符，但不能匹配换行符
+*		任意个字符
++ 		至少一个字符
+?		0个或1个字符
+{n}    	n个字符
+{n,m}	n到m个字符
+[]		范围匹配。
+\-		特殊字符要用\进行转义。
+|		或的关系
+^		表示行的开头，^\d表示必须以数字开头
+$		表示行的结束，\w$表示必须以数字或字母结束。
+```
 
-  因为正则表达式也是用字符串表示的，所以，我们要首先了解如何用字符来描述字符。
+看个复杂的例子：
 
-  ```
-  \d 		1个数字
-  \w 		一个字母或数字
-  \s		匹配1个空格，包括Tab
-  .		匹配任意字符，但不能匹配换行符
-  *		任意个字符
-  + 		至少一个字符
-  ?		0个或1个字符
-  {n}    	n个字符
-  {n,m}	n到m个字符
-  []		范围匹配。
-  \-		特殊字符要用\进行转义。
-  |		或的关系
-  ^		表示行的开头，^\d表示必须以数字开头
-  $		表示行的结束，\w$表示必须以数字或字母结束。
-  ```
+```
+^\d{3}\s+\d{3,8}$,它匹配的是什么呢？
+```
 
-  看个复杂的例子：
+javascript中创建正则表达式的方法有2种：
 
-  ```
-  ^\d{3}\s+\d{3,8}$,它匹配的是什么呢？
-  ```
+第一种方式是直接通过`/正则表达式/`写出来，第二种方式是通过`new RegExp('正则表达式')`创建一个RegExp对象。
 
-  javascript中创建正则表达式的方法有2种：
+```
+var re1 = /ABC\-001/;
+var re2 = new RegExp('ABC\\-001');
 
-  第一种方式是直接通过`/正则表达式/`写出来，第二种方式是通过`new RegExp('正则表达式')`创建一个RegExp对象。
+判断是否匹配用test
+var re = /^\d{3}\-\d{3,8}$/;
+re.test('010-12345'); // true
+re.test('010-1234x'); // false
+re.test('010 12345'); // false
+```
 
-  ```
-  var re1 = /ABC\-001/;
-  var re2 = new RegExp('ABC\\-001');
+回到本小节的开头，如何写一个匹配email地址的正则表达式呢？
 
-  判断是否匹配用test
-  var re = /^\d{3}\-\d{3,8}$/;
-  re.test('010-12345'); // true
-  re.test('010-1234x'); // false
-  re.test('010 12345'); // false
-  ```
+```
+// 开头 数不清个数字英文和点   @   英文和数字  .  3-4个英文 结尾
+var re = /^[a-zA-Z0-9.]+@[a-z0-9]+.[a-z]{2,4}$/;
+```
 
-  回到本小节的开头，如何写一个匹配email地址的正则表达式呢？
+​
 
-  ```
-  // 开头 数不清个数字英文和点   @   英文和数字  .  3-4个英文 结尾
-  var re = /^[a-zA-Z0-9.]+@[a-z0-9]+.[a-z]{2,4}$/;
-  ```
+> ### 常用的正则表达式
+>
+> 请参考：http://www.sojson.com/regex/generate
+>
+> ​
 
-  ​
+### 1.10 JSON
 
-  > ### 常用的正则表达式
-  >
-  > 请参考：http://www.sojson.com/regex/generate
-  >
-  > ​
+JSON是JavaScript Object Notation的缩写，它是一种数据交换格式。
 
-- ### JSON
+在JSON出现之前，大家一直用XML在网上传输数据。但搞起来很复杂，任何正常的程序员碰到XML都会觉得头很大。
 
-  JSON是JavaScript Object Notation的缩写，它是一种数据交换格式。
+终于，在2002年的一天，道格拉斯·克罗克福特（Douglas Crockford）同学为了拯救深陷水深火热同时又被某几个巨型软件企业长期愚弄的软件工程师，发明了JSON这种超轻量级的数据交换格式。
 
-  在JSON出现之前，大家一直用XML在网上传输数据。但搞起来很复杂，任何正常的程序员碰到XML都会觉得头很大。
+他设计的JSON是javascript的一个子集（子集不知道的同学，要复习一下初中代数哦！~），也就是说，在JSON中一共就那么几种数据类型
 
-  终于，在2002年的一天，道格拉斯·克罗克福特（Douglas Crockford）同学为了拯救深陷水深火热同时又被某几个巨型软件企业长期愚弄的软件工程师，发明了JSON这种超轻量级的数据交换格式。
+```
+number：和JavaScript的number完全一致；
+boolean：就是JavaScript的true或false；
+string：就是JavaScript的string；
+null：就是JavaScript的null；
+array：就是JavaScript的Array表示方式——[]；
+object：就是JavaScript的{ ... }表示方式。
+```
 
-  他设计的JSON是javascript的一个子集（子集不知道的同学，要复习一下初中代数哦！~），也就是说，在JSON中一共就那么几种数据类型
+及以上的任意组合。
 
-  ```
-  number：和JavaScript的number完全一致；
-  boolean：就是JavaScript的true或false；
-  string：就是JavaScript的string；
-  null：就是JavaScript的null；
-  array：就是JavaScript的Array表示方式——[]；
-  object：就是JavaScript的{ ... }表示方式。
-  ```
+另外，JSON定死了字符集是UTF-8，字符串必须用双引号"",Object的键也必须用双引号""。
 
-  及以上的任意组合。
+javascript对JSON有2种处理方式：
 
-  另外，JSON定死了字符集是UTF-8，字符串必须用双引号"",Object的键也必须用双引号""。
+**序列化：**
 
-  javascript对JSON有2种处理方式：
+就是把javascript的Object对象变成string
 
-  **序列化：**
+```
+var xiaoming = {
+    name: '小明',
+    age: 14,
+    gender: true,
+    height: 1.65,
+    grade: null,
+    'middle-school': '\"博为峰\"软件技术公司',
+    skills: ['JavaScript', 'Java', 'Python', 'Lisp']
+};
 
-  就是把javascript的Object对象变成string
+JSON.stringify(xiaoming); 
+```
 
-  ```
-  var xiaoming = {
-      name: '小明',
-      age: 14,
-      gender: true,
-      height: 1.65,
-      grade: null,
-      'middle-school': '\"博为峰\"软件技术公司',
-      skills: ['JavaScript', 'Java', 'Python', 'Lisp']
-  };
+格式化后的结果就是这样子的：
 
-  JSON.stringify(xiaoming); 
-  ```
+```
+{
+  "name": "小明",
+  "age": 14,
+  "gender": true,
+  "height": 1.65,
+  "grade": null,
+  "middle-school": "\"博为峰\"软件技术公司",
+  "skills": [
+    "JavaScript",
+    "Java",
+    "Python",
+    "Lisp"
+  ]
+}
+```
 
-  格式化后的结果就是这样子的：
+### 反序列化：
 
-  ```
-  {
-    "name": "小明",
-    "age": 14,
-    "gender": true,
-    "height": 1.65,
-    "grade": null,
-    "middle-school": "\"博为峰\"软件技术公司",
-    "skills": [
-      "JavaScript",
-      "Java",
-      "Python",
-      "Lisp"
-    ]
-  }
-  ```
+把json字符串变成javascript对象
 
-  ### 反序列化：
+```
+JSON.parse('[1,2,3,true]');				 	// [1, 2, 3, true]
+JSON.parse('{"name":"小明","age":14}'); 		// Object {name: '小明', age: 14}
+JSON.parse('true'); 					 	// true
+JSON.parse('123.45'); 					 	// 123.45
 
-  把json字符串变成javascript对象
+还可以这样
+JSON.parse('{"name":"小明","age":14}', function (key, value) {
+    // 把number * 2:
+    if (key === 'name') {
+        return value + '同学';
+    }
+    return value;
+}); // Object {name: '小明同学', age: 14}
+```
+### 1.11 函数
 
-  ```
-  JSON.parse('[1,2,3,true]');				 	// [1, 2, 3, true]
-  JSON.parse('{"name":"小明","age":14}'); 		// Object {name: '小明', age: 14}
-  JSON.parse('true'); 					 	// true
-  JSON.parse('123.45'); 					 	// 123.45
+### 函数的定义
 
-  还可以这样
-  JSON.parse('{"name":"小明","age":14}', function (key, value) {
-      // 把number * 2:
-      if (key === 'name') {
-          return value + '同学';
-      }
-      return value;
-  }); // Object {name: '小明同学', age: 14}
-  ```
+在JavaScript中，定义函数的方式如下：
 
-- ### 函数
+```
+function abs(x) {
+    if (x >= 0) {
+        return x;
+    } else {
+        return -x;
+    }
+}
+```
 
-  ### 函数的定义
+上述`abs()`函数的定义如下：
 
-  在JavaScript中，定义函数的方式如下：
+- `function`指出这是一个函数定义；
+- `abs`是函数的名称；
+- `(x)`括号内列出函数的参数，多个参数以`,`分隔；
+- `{ ... }`之间的代码是函数体，可以包含若干语句，甚至可以没有任何语句。
 
-  ```
-  function abs(x) {
-      if (x >= 0) {
-          return x;
-      } else {
-          return -x;
-      }
-  }
-  ```
+第二种定义函数的方式
 
-  上述`abs()`函数的定义如下：
+```
+var abs = function (x) {
+    if (x >= 0) {
+        return x;
+    } else {
+        return -x;
+    }
+};
+```
 
-  - `function`指出这是一个函数定义；
-  - `abs`是函数的名称；
-  - `(x)`括号内列出函数的参数，多个参数以`,`分隔；
-  - `{ ... }`之间的代码是函数体，可以包含若干语句，甚至可以没有任何语句。
+在这种方式下，`function (x) { ... }`是一个匿名函数，它没有函数名。但是，这个匿名函数赋值给了变量`abs`，所以，通过变量`abs`就可以调用该函数。
 
-  第二种定义函数的方式
+上述两种定义*完全等价*，注意第二种方式按照完整语法需要在函数体末尾加一个`;`，表示赋值语句结束。
 
-  ```
-  var abs = function (x) {
-      if (x >= 0) {
-          return x;
-      } else {
-          return -x;
-      }
-  };
-  ```
+### 1.12 函数调用
 
-  在这种方式下，`function (x) { ... }`是一个匿名函数，它没有函数名。但是，这个匿名函数赋值给了变量`abs`，所以，通过变量`abs`就可以调用该函数。
+调用函数时，按顺序传入参数即可：
 
-  上述两种定义*完全等价*，注意第二种方式按照完整语法需要在函数体末尾加一个`;`，表示赋值语句结束。
-
-  **函数调用**
-
-  调用函数时，按顺序传入参数即可：
-
-  ```
-  abs(10); // 返回10
-  ```
+```
+abs(10); // 返回10
+```
 
 - ### 定时器和延时器
 
@@ -377,7 +369,7 @@
   ```
 
 
-  **方法**
+### 1.13 方法
 
   定义在对象内部的函数叫方法。
 
