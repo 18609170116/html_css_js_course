@@ -524,7 +524,7 @@ if (!js || js.innerText !== 'JavaScript') {
 
 -  ​
 
-      ​
+       ​
 
 
 # 5、课后补充作业
@@ -636,6 +636,25 @@ js.style.fontWeight = "bold";
         alert('测试失败!');
     }
 })();
+```
+
+答案：
+
+```
+   //获取到所有li
+   var arr = document.getElementsByTagName('li');
+   //新建临时数组，用来存放li中的innerHtml(为什么不用innerText呢？？？)
+    var tempArr = new Array(arr.length);
+    for (var i = 0; i < arr.length; i++) {
+        tempArr[i] = arr[i].innerHTML;
+    }
+	//对临时数组排序
+    tempArr.sort();
+    //console.log(tempArr);
+	//将排序后的赋回原li DOM对象数组
+    for (var i = 0; i < arr.length; i++) {
+        arr[i].innerText = tempArr[i];
+    }
 ```
 
 3、
