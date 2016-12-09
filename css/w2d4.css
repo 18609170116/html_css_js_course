@@ -1,0 +1,50 @@
+.div-common {
+    border: 1px dotted yellow;
+}
+
+.test-selector {
+    background-color: #999999;
+}
+
+.div-form {
+    width: 300px;
+    height: 100px;
+    background-color: #ff4fde;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    border: 2px dotted darkgreen;
+}
+
+.test-lang {
+
+}
+
+.lang-javascript {
+
+}
+
+.lang-python {
+
+}
+
+.lang-lua {
+
+}
+
+.lang-swift {
+}
+
+.lang-java {
+
+}
+
+.lang-c {
+
+}
+
+.newclass {
+    background-color: green;
+    border: 15px solid orange;
+    width: 100px;
+}

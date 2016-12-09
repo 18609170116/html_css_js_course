@@ -5,20 +5,35 @@
     <title>Title</title>
     <script src="js/jquery-1.11.3/jquery.js"></script>
     <script src="js/w2d4.js"></script>
- </head>
+    <link type="text/css" rel="stylesheet" href="css/w2d4.css"/>
+</head>
 <body>
 <!-- HTML结构 -->
-<div id="selector" class="test-selector">
-    <ul class="test-lang">
-        <li class="lang-javascript">JavaScript</li>
+<div id="selector" class="test-selector div-common">
+    <ul id="no-compiled" class="test-lang">
+        <li name="js" class="lang-javascript">JavaScript</li>
         <li class="lang-python">Python</li>
         <li class="lang-lua">Lua</li>
     </ul>
-    <ol class="test-lang">
-        <li class="lang-swift">Swift</li>
+    <ol id="need-compiled" class="test-lang">
+        <li name="userLearned" class="lang-swift">Swift</li>
         <li class="lang-java">Java</li>
-        <li id = "lang-c" class="lang-c">C</li>
+        <p><a href="#">链接 &amp;</a></p>
+        <li id="lang-c" class="lang-c">C</li>
+        <div>
+            <li name="userLearned"> adlkadslkasdlk</li>
+        </div>
     </ol>
+</div>
+
+<div class="div-form">
+    <form name="loginForm" action="#" method="post">
+        用户名<input name="username" type="text"/><br>
+        地址<input name="useraddress" type="text"/><br>
+        密码<input name="userpass" type="password"/><br>
+        <input type="submit" value="提交"/>
+
+    </form>
 </div>
 
 </body>

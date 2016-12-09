@@ -41,6 +41,75 @@ $(function() {
     var test_langs = $(".test-lang")
     console.log("类选择器："+test_langs.length);
 
+    //属性选择器
+    var jss  = $('[name=js]');
+    console.log(jss.length);
+
+    var sumbits = $('[type=submit]');
+    console.log("类型为submit的数量："+sumbits.length);
+
+    //找出属性名称是name，值是以user开头的所有的元素
+    var userstarts = $('[name^=user]');
+    console.log("找出属性名称是name，值是以user开头的所有的元素"+userstarts.length);
+
+    //找出name为username的输入框
+    var input1 = $('input[name=username]');
+    console.log(input1.length);
+
+    //找出类为test-lang的所有ul元素
+    var uls = $('ul.test-lang');
+    console.log(uls.length);
+
+    //组合选择器
+    var com1 = $('input[name=username],li.lang-lua');
+    console.log("组合选择器："+com1.length);
+
+    //层级选择器
+    var cj1 = $('#need-compiled li[name=userLearned]');
+    console.log("层级选择器"+cj1.length);
+
+    //子选择器
+    var p_c = $('form[name=loginForm]>input[name=username]');
+    console.log("子选择器"+p_c.length);
+
+    //过滤器
+    var selected = $('#need-compiled>li');
+    console.log("li对象数组长度："+selected.length);
+
+    var filtered1 = $('#need-compiled>li:first-child');
+    console.log("过滤器1："+filtered1.length);
+
+    var filtered2 = $('#need-compiled>li:nth-child(even)');
+    console.log("对象吗？"+filtered2);
+    console.log("文本"+filtered2.text());
+    console.log("过滤器2："+filtered2.length);
+
+
+    console.log("从这里开始看");
+    //操作DOM
+    var p = $('#need-compiled p');
+    //更改里面的文本
+    p.text("更改后的值 &amp;");
+    console.log(p.text());
+    console.log(p.html());
+    //更改里面的内容为带有html标记的内容，p标记依然存在
+    p.html('更改后的内容');
+    console.log(p.html());
+
+
+    // console.log(p);
+    // console.log(p.get(0).innerHTML);
+    // console.log(p.get(0).innerText);
+    //
+    // console.log(p.get(0).innerText);
+    // console.log(p.context);
+    // console.log(p.prevObject);
+    // console.log(p.__proto__);
+
+    //动态改变CSS
+    //p.css('background-color','green').css('border','5px solid black').css('width','100px');
+    p.addClass("newclass");
+
 
 });
 

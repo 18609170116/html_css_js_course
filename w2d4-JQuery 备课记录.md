@@ -1,5 +1,3 @@
-
-
 # w2d4 - JQuery 备课记录
 
 # 一、知识点梳理
@@ -137,7 +135,7 @@ $('p.red,p.green'); // 把<p class="red">和<p class="green">都选出来
 
 ### 层级选择器
 
-如果两个DOM元素具有层级关系，就可以用`$('ancestor descendant')`来选择，层级之间用空格隔开。例如：
+如果两个DOM元素具有层级关系（就是具有包含关系），就可以用`$('ancestor descendant')`来选择，层级之间用空格隔开。例如：
 
 ```
 <!-- HTML结构 -->
@@ -269,6 +267,10 @@ $('#test-css li.dy>span').addClass('highlight');
 ```
 
 做练习3。
+
+
+
+！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 
 ### 3.显示和隐藏DOM
 
