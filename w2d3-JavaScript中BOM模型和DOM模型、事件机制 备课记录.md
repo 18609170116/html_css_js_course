@@ -356,7 +356,7 @@ removed === self; // true
     </div>
 </body>
 <script>
-	window.onload=function(){
+	window.onload=function(){                
     var div1 = document.getElementById('div1');
     var div2 = document.getElementById('div2');
     div1.addEventListener('click', alertID, true);
@@ -440,7 +440,7 @@ onselect
 　 5.7.9 数组对象   
 　 5.7.10自定义对象  
   </textarea>           //当选择该文本区域的文字时弹出警告框  
-</form> 
+</form>
 ```
 
 onLoad（图像或页面结束载入时产生）
@@ -457,8 +457,8 @@ function MM_openBrWindow(theURL, winName, features) {
 onmouseover和onmouseout
 
 ```
-<a href="http://www.baidu.com" onmouseover="alert('鼠标移上来了')">baidu</a>  
-<font onmouseout="alert('鼠标移走了')">mouse</font>  
+<a href="http://www.baidu.com" onmouseover="alert('鼠标移上来了')">baidu</a>
+<font onmouseout="alert('鼠标移走了')">mouse</font>
 ```
 
 # 2、重点、难点知识讲解思路
@@ -524,7 +524,7 @@ if (!js || js.innerText !== 'JavaScript') {
 
 -  ​
 
-    ​
+     ​
 
 
 # 5、课后补充作业

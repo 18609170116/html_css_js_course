@@ -7,6 +7,7 @@
         function Add(sText, objText) {
             document.getElementById("msg").innerHTML += sText + "执行顺序：" + i + "<br />" + "<hr />";
             i = i + 1;
+            //去掉下一行注释时，会阻止冒泡向上传递。
             //window.event.cancelBubble = true;
         }
     </script>
@@ -21,6 +22,7 @@
 
     </style>
 </head>
+<h2>冒泡型事件</h2>
 <body onclick="Add('body事件触发<br />','body')">
 <div onclick="Add('div事件触发<br />','div')">
     <p style="margin-left: 50px;background: lightgray;border: 1px dotted black;"

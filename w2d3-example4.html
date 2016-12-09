@@ -2,21 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <style>
+        img {
+            width: 100px;
+        }
+
+        div {
+            width: 100px;
+            background-color: green;
+        }
+    </style>
     <script type="text/javascript">
-        function test1(){
+        function test() {
             //得到用户的内容
             var content = document.getElementById("inputs").value;
-            //window.alert(content.value);
-            var myReg=/(\d){4}/;//这是一个正则表达式对象，可以检索4个连续的数字
-            var fourNumbers;
-            while(fourNumbers = myReg.exec(content)){
-                window.alert("找到："+fourNumbers[0]);
+            if (content.length === 0) {
+                alert("请输入多行文字，最好有连续的数字");
+                return;
             }
+            //window.alert(content.value);
+            var myReg = /(\d){4}/;//这是一个正则表达式对象，可以检索4个连续的数字
+            var fourNumbers = myReg.exec(content);
+            console.log(fourNumbers);
+            for (var i = 0; i < fourNumbers.length; i++) {
+                console.log("找到：" + fourNumbers[i]);
+            }
+//            //while循环显示数据
+//            while(fourNumbers = myReg.exec(content)){
+//                window.alert("找到："+fourNumbers[0]);
+//                break;
+//            }
         }
+
+        function changeUsername() {
+            alert("用户名更改为" + document.getElementsByName("username")[0].value);
+        }
+
     </script>
 </head>
 <body>
-<textarea id="inputs" rows="10" cols="20"></textarea>
-<input type="button" value="测试" onclick="test1()"/>
+<h2>onclick事件</h2>
+<div>
+    <textarea id="inputs" rows="10" cols="20"></textarea>
+    <input type="button" value="测试" onclick="test()"/>
+</div>
+<br>
+
+<h2>onchange事件，更改用户名</h2>
+<div>
+    <form name="form1" action="#" method="post">
+        <!--当文本框的值变化时弹出警告框,事件中调用函数-->
+        <input name="username" type="text" onchange="changeUsername()"/>
+    </form>
+</div>
+
+<h2>onselect事件,当选择下方区域内的文字时弹出警告框</h2>
+<form name="form1" action="" method="post">
+    <textarea name="textarea1" rows="10" cols="40" onselect="alert('该文档不能被复制')"/>
+    Windows对象（上）（下）
+    　 5.7.3 Location对象
+    　 5.7.4 History对象
+    　 5.7.5 Document对象
+    　 5.7.6 字符串对象
+    　 5.7.7 数学对象
+    　 5.7.8 时间对象
+    　 5.7.9 数组对象
+    　 5.7.10自定义对象
+    </textarea>
+</form>
+
+<h2>onload事件，图片加载到DOM树中时触发</h2>
+<img src="img/body_bg.jpg" onload="alert('图片加载完成')">
+
+<h2>鼠标移入和移出时事件</h2>
+<div>
+    <a href="http://www.baidu.com" onmouseover="alert('鼠标进来了')"><h2>移上来时触发</h2></a><br>
+    <font onmouseout="alert('鼠标移走了')"><h2>移走时触发</h2></font><br>
+</div>
 </body>
 </html>
