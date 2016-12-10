@@ -17,21 +17,22 @@
 }
 
 .form_element_width {
-    width:120px;
+    width: 120px;
 }
 
-.newclass {
-    background-color: green;
-    border: 15px solid orange;
-    width: 100px;
-}
 
-.div1{
-    width:200px;
-    height:100px;
+.div1 {
+    width: 200px;
+    height: 100px;
     background-color: #999999;
 }
 
-form{
-    width:220px;
+#div2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+form {
+    width: 220px;
 }

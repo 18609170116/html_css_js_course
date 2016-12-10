@@ -453,7 +453,7 @@ jQuery能够绑定的事件主要包括：
 >
 > **mousemove**：鼠标在DOM内部移动时触发；
 >
-> **hover**：鼠标进入和退出时触发两个函数，相当于mouseenter加上mouseleave。
+> **hover**：鼠标进入和退出时触发,相当于两个函数mouseenter加上mouseleave的效果。
 
 ### 键盘事件
 
@@ -477,7 +477,7 @@ jQuery能够绑定的事件主要包括：
 >
 > **ready**：当页面被载入并且DOM树完成初始化后触发。
 
-取消绑定：通过off('click',function)实现。
+取消绑定：通过unbind('click',function)实现。
 
 ```
 function hello() {
@@ -488,7 +488,7 @@ a.click(hello); // 绑定事件
 
 // 10秒钟后解除绑定:
 setTimeout(function () {
-    a.off('click', hello);
+    a.unbind('click', hello);
 }, 10000);
 ```
 
@@ -570,7 +570,7 @@ div.animate({
 - 仅选择Erlang
 - 选择JavaScript和Erlang
 - 选择所有编程语言
-- 选择名字input
+- 选择name='name'的input对象
 - 选择邮件和名字input
 
 ```

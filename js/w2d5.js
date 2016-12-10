@@ -1,6 +1,10 @@
 /**
  * Created by lgm on 2016/12/10.
  */
+
+
+
+
 $(function () {
 
     //隐藏Python节点
@@ -29,17 +33,16 @@ $(function () {
     //操作节点属性
     //添加一个属性
     var jquery_target = $(target);
-    jquery_target.attr('id','id1');
+    jquery_target.attr('id', 'id1');
 
     //取得原有class的属性值
     var old_class_value = jquery_target.attr('class');
     console.log(old_class_value);
     //去掉class属性值中的' dy'
-    var sub = old_class_value.substr(0,old_class_value.indexOf(' dy'));
+    var sub = old_class_value.substr(0, old_class_value.indexOf(' dy'));
     console.log(sub);
     //赋予该对象新的class属性。
-    jquery_target.attr('class',sub);
-
+    jquery_target.attr('class', sub);
 
 
     //操作表单
@@ -61,13 +64,13 @@ $(function () {
 
     //对象方式append
     var li2 = document.createElement('li');
-    li2.setAttribute('class','lang');
+    li2.setAttribute('class', 'lang');
     li2.innerHTML = 'c++';
     ul.append(li2);
 
     //函数方式append
-    ul.append(function(){
-       return '<li class="lang">C#</li>';
+    ul.append(function () {
+        return '<li class="lang">C#</li>';
     });
 
     //prepend方式新增, 会加到最前面
@@ -82,4 +85,44 @@ $(function () {
     var deletedObj = $($('li')[8]).remove();
     console.log(deletedObj);
 
+
+    //事件
+    var obj = $('li')[8];
+    //obj.addEventListener('click',function(){alert('adsfasdfasd')},true);
+
+    //click事件触发时调用匿名内置函数
+    $($('li')[3]).on('click', function () {
+        alert('aaa');
+    });
+
+    //简化
+    $($('li')[2]).click(function () {
+        alert('第3个元素被click了');
+    });
+
+
+    //$($('li')[1]).bind('dblclick',dbclickFuction);
+    $($('li')[1]).dblclick(dbclickFuction);
+    $($('li')[1]).click(dbclickFuction);
+
+    //移除dblclick事件
+    $($('li')[1]).unbind('dblclick',dbclickFuction);
+    //移除绑定到该对象的所有事件
+    $($('li')[1]).unbind();
+
+    //通用的方式,先获得一个jquery对象
+    var jquery_obj;
+    jquery_obj.keyup(function () {
+        //在这里写具体的业务代码
+    });
+
+
+    function dbclickFuction(event) {
+        alert('元素被dblclick了');
+    }
+
 });
+
+
+
+
