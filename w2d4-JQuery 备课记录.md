@@ -274,7 +274,7 @@ $('#test-css li.dy>span').addClass('highlight');
 
 ### 3.显示和隐藏DOM
 
-jQuery提供`show()`和`hide()`方法，我们不用关心它是如何修改`display`属性的，总之它能正常工作：
+jQuery提供`show()`和`hide()`方法：
 
 ```
 var a = $('a[target=_blank]');
@@ -400,6 +400,8 @@ ul.append(function (index, html) {
 
 `append()`把DOM添加到最后，`prepend()`则把DOM添加到最前。
 
+同级用before()和after();
+
 #### 7.2删除DOM
 
 要删除DOM节点，拿到jQuery对象后直接调用`remove()`方法就可以了。如果jQuery对象包含若干DOM节点，实际上可以一次删除多个DOM节点：
@@ -469,9 +471,9 @@ jQuery能够绑定的事件主要包括：
 >
 > **blur**：当DOM失去焦点时触发；
 >
-> **change**：当``、``或``的内容改变时触发；``
+> **change**：当内容改变时触发；
 >
-> **submit**：当``提交时触发；
+> **submit**：当提交时触发；
 >
 > **ready**：当页面被载入并且DOM树完成初始化后触发。
 
@@ -547,7 +549,7 @@ div.animate({
 
 -    动画
 
-        都应该由浅入深，配有代码和讲解，中间要让学生自己尝试。
+              都应该由浅入深，配有代码和讲解，中间要让学生自己尝试。
 
 
 # 三、课堂补充案例
