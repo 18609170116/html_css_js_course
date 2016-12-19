@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            weight: 100px;
+            margin: 100px 10px 0px 100px;
+            border: 10px solid black;
+            float:left;
+        }
+
+        div:hover > img.smaller {
+            transform: scale(0.8, 0.8);
+            transition: .2s transform;
+        }
+
+        div:hover > img.bigger {
+            transform: scale(1.2, 1.2);
+            transition: .5s transform;
+            border: 12px solid black;
+        }
+    </style>
+</head>
+<body>
+
+:hover 选择器用于选择鼠标指针浮动在上面的元素。<br>
+提示：:hover 选择器可用于所有元素，不只是链接。<br>
+提示：:link 选择器设置指向未被访问页面的链接的样式，:visited 选择器用于设置指向已被访问的页面的链接，:active 选择器用于活动链接。<br>
+注释：在 CSS 定义中，:hover 必须位于 :link 和 :visited 之后（如果存在的话），这样样式才能生效。<br>
+
+<div>
+    <img class="bigger" src="img/js_event.png"/>
+</div>
+<div>
+    <img class="smaller" src="img/js1.png"/>
+</div>
+
+</body>
+</html>
