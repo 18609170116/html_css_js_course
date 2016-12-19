@@ -2,7 +2,7 @@
 
 # 1、知识点梳理
 
-前面我们比较完整地学习了javascript的语法，使用等等，本章主要讲解使用javascript操作浏览器，以达到实现动态、酷炫、高大上的前面展示效果。
+前面我们比较完整地学习了javascript的语法，使用等等，我们学习javascript的目的是为了用javascript操作页面元素，那么，为了实现页面动态的响应和页面的各种酷炫、高大上的展示效果，我们需要先对浏览器模型(BOM)和DOM模型有个了解。
 
 ## 1.1 BOM模型
 
@@ -17,7 +17,7 @@ BOM提供了独立于内容而与浏览器窗口进行交互的对象。用来�
 是document object model的缩写, 简称文档对象模型。是w3c规定的三类DOM标准接口，用来获取或设置文档中标签的属性，例如获取或者设置input表单的value值。
 
 > - Core DOM 核心DOM，适用于各种结构化文档
-> - XML DOM Java OOP学过，专用于XML文档
+> - XML DOM Java OOP，专用于XML文档
 > - HTML DOM 专用于HTML文档
 >
 >
@@ -30,7 +30,7 @@ JavaScript可以获取浏览器提供的很多对象，并进行操作。
 
 ```
 'use strict';
-// 可以调整浏览器窗口大小试试:
+// 可以显示浏览器窗口大小参数:
 alert('window inner size: ' + window.innerWidth + ' x ' + window.innerHeight);
 
 //打开窗口
@@ -74,7 +74,7 @@ alert('appName = ' + navigator.appName + '\n' +
 `location`对象表示当前页面的URL信息。例如，一个完整的URL：
 
 ```
-http://www.example.com:8080/path/index.html?a=1&b=2#TOP
+http://www.example.com:8080/path1/path2/dkdkkd....../index.html?a=1&b=2#TOP
 ```
 
 可以用`location.href`获取。要获得URL各个部分的值，可以这么写：
@@ -88,7 +88,9 @@ location.search; 		// '?a=1&b=2'
 location.hash; 			// 'TOP'
 ```
 
-要加载一个新页面，可以调用`location.assign()`。如果要重新加载当前页面，调用`location.reload()`方法非常方便。
+要加载一个新页面，可以调用`location.assign()`。
+
+如果要重新加载当前页面，调用`location.reload()`方法非常方便。
 
 ```
 if (confirm('重新加载当前页' + location.href + '?')) {
@@ -97,6 +99,14 @@ if (confirm('重新加载当前页' + location.href + '?')) {
     location.assign('/discuss'); // 设置一个新的URL地址
 }
 ```
+
+> 小练习：
+>
+> 1、请用javascript操作打开一个新窗口，窗口高度300，宽度400，地址是百度主页。
+>
+> 2、窗口打开后，获取当前窗口的location信息并输出到控制台。
+>
+> 3、请尝试在2秒延时后加载QQ的主页。
 
 
 
@@ -115,6 +125,9 @@ document对象表示当前页面。由于HTML在浏览器中以DOM形式表示�
 要查找DOM树的某个节点，需要从`document`对象开始查找。最常用的查找是根据ID和Tag Name。
 
 ```
+//datalist=dl 
+//dt=data title 
+//dd=data description
 <dl id="drink-menu" style="border:solid 1px #ccc;padding:6px;">
     <dt>摩卡</dt>
     <dd>热摩卡咖啡</dd>
@@ -175,13 +188,13 @@ window.onload=function(){
 第一种方法是如下3种：
 
 ```
-document.getElementById()
-document.getElementsByTagName()
+document.getElementById("q1")
+document.getElementsByTagName("")
 以及CSS选择器
-document.getElementsByClassName()
+document.getElementsByClassName("")
 ```
 
-第二种方法是使用`querySelector()`和`querySelectorAll()`
+第二种方法是使用`querySelector()`和`querySelectorAll()`,请注意，条件中的语句跟css选择器的语法是一样的。
 
 ```
 // 通过querySelector获取ID为q1的节点：
@@ -227,7 +240,7 @@ p.style.fontSize = '20px';
 p.style.paddingTop = '2em';
 ```
 
-### 3、更新DOM
+### 3、插入DOM
 
 当我们获得了某个DOM节点，想在这个DOM节点内插入新的DOM，应该如何做？
 
@@ -251,6 +264,7 @@ div.innerHtml='我是一个div，我的内容被更改了';
     <p id="java">Java</p>
     <p id="python">Python</p>
     <p id="scheme">Scheme</p>
+  
 </div>
 ```
 
@@ -263,7 +277,9 @@ var
 list.appendChild(js);
 ```
 
-更多的时候我们会从零创建一个新的节点，然后插入到指定位置：
+更多的时候我们会从零创建一个新的节点，然后插入到指定位置.
+
+用 createElement创建一个dom元素：
 
 ```
 var
@@ -340,6 +356,7 @@ removed === self; // true
     </div>
 </body>
 <script>
+	window.onload=function(){                
     var div1 = document.getElementById('div1');
     var div2 = document.getElementById('div2');
     div1.addEventListener('click', alertID, true);
@@ -347,6 +364,7 @@ removed === self; // true
   
     function alertID() {
         alert(this.id);
+    }
     }
 </script>
 </html>
@@ -422,7 +440,7 @@ onselect
 　 5.7.9 数组对象   
 　 5.7.10自定义对象  
   </textarea>           //当选择该文本区域的文字时弹出警告框  
-</form> 
+</form>
 ```
 
 onLoad（图像或页面结束载入时产生）
@@ -439,8 +457,8 @@ function MM_openBrWindow(theURL, winName, features) {
 onmouseover和onmouseout
 
 ```
-<a href="http://www.baidu.com" onmouseover="alert('鼠标移上来了')">baidu</a>  
-<font onmouseout="alert('鼠标移走了')">mouse</font>  
+<a href="http://www.baidu.com" onmouseover="alert('鼠标移上来了')">baidu</a>
+<font onmouseout="alert('鼠标移走了')">mouse</font>
 ```
 
 # 2、重点、难点知识讲解思路
@@ -504,9 +522,6 @@ if (!js || js.innerText !== 'JavaScript') {
 
 -  在写代码的时候，问一些学过的代码的写法，比如js文件的引入,背景、边框的css表示。
 
--  ​
-
-    ​
 
 
 # 5、课后补充作业
@@ -620,6 +635,25 @@ js.style.fontWeight = "bold";
 })();
 ```
 
+答案：
+
+```
+   //获取到所有li
+   var arr = document.getElementsByTagName('li');
+   //新建临时数组，用来存放li中的innerHtml(为什么不用innerText呢？？？)
+    var tempArr = new Array(arr.length);
+    for (var i = 0; i < arr.length; i++) {
+        tempArr[i] = arr[i].innerHTML;
+    }
+	//对临时数组排序
+    tempArr.sort();
+    //console.log(tempArr);
+	//将排序后的赋回原li DOM对象数组
+    for (var i = 0; i < arr.length; i++) {
+        arr[i].innerText = tempArr[i];
+    }
+```
+
 3、
 
 - JavaScript
@@ -673,4 +707,4 @@ js.style.fontWeight = "bold";
 })();
 ```
 
-4、上题中，当删除动作触发时，请弹出是否删除对话框，当点击确定时删除，并查看浏览器是否自动加载删除后的页面，请查看页面的DOM模型；否则reload本页面。
+4、上题中，当删除动作触发时，请弹出是否删除对话框，当点击确定时删除，并查看删除后的页面效果，并在控制台上查看DOM元素。否则不做任何修改。

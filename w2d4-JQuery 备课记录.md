@@ -1,12 +1,8 @@
-
-
 # w2d4 - JQuery 备课记录
 
 # 一、知识点梳理
 
 ##jquery简介
-
-- ###你可能听说过jQuery，它名字起得很土，但却是JavaScript世界中使用最广泛的一个库。
 
 - ###你可能听说过jQuery，它名字起得很土，但却是JavaScript世界中使用最广泛的一个库。
 
@@ -19,6 +15,7 @@
   - 轻松实现动画、修改CSS等各种操作。
 
   jQuery的理念“Write Less, Do More“，让你写更少的代码，完成更多的工作！
+
 
 
 ##jQuery版本
@@ -138,7 +135,7 @@ $('p.red,p.green'); // 把<p class="red">和<p class="green">都选出来
 
 ### 层级选择器
 
-如果两个DOM元素具有层级关系，就可以用`$('ancestor descendant')`来选择，层级之间用空格隔开。例如：
+如果两个DOM元素具有层级关系（就是具有包含关系），就可以用`$('ancestor descendant')`来选择，层级之间用空格隔开。例如：
 
 ```
 <!-- HTML结构 -->
@@ -271,9 +268,13 @@ $('#test-css li.dy>span').addClass('highlight');
 
 做练习3。
 
+
+
+！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+
 ### 3.显示和隐藏DOM
 
-jQuery提供`show()`和`hide()`方法，我们不用关心它是如何修改`display`属性的，总之它能正常工作：
+jQuery提供`show()`和`hide()`方法：
 
 ```
 var a = $('a[target=_blank]');
@@ -399,6 +400,8 @@ ul.append(function (index, html) {
 
 `append()`把DOM添加到最后，`prepend()`则把DOM添加到最前。
 
+同级用before()和after();
+
 #### 7.2删除DOM
 
 要删除DOM节点，拿到jQuery对象后直接调用`remove()`方法就可以了。如果jQuery对象包含若干DOM节点，实际上可以一次删除多个DOM节点：
@@ -450,7 +453,7 @@ jQuery能够绑定的事件主要包括：
 >
 > **mousemove**：鼠标在DOM内部移动时触发；
 >
-> **hover**：鼠标进入和退出时触发两个函数，相当于mouseenter加上mouseleave。
+> **hover**：鼠标进入和退出时触发,相当于两个函数mouseenter加上mouseleave的效果。
 
 ### 键盘事件
 
@@ -468,13 +471,13 @@ jQuery能够绑定的事件主要包括：
 >
 > **blur**：当DOM失去焦点时触发；
 >
-> **change**：当``、``或``的内容改变时触发；``
+> **change**：当内容改变时触发；
 >
-> **submit**：当``提交时触发；
+> **submit**：当提交时触发；
 >
 > **ready**：当页面被载入并且DOM树完成初始化后触发。
 
-取消绑定：通过off('click',function)实现。
+取消绑定：通过unbind('click',function)实现。
 
 ```
 function hello() {
@@ -485,7 +488,7 @@ a.click(hello); // 绑定事件
 
 // 10秒钟后解除绑定:
 setTimeout(function () {
-    a.off('click', hello);
+    a.unbind('click', hello);
 }, 10000);
 ```
 
@@ -546,7 +549,7 @@ div.animate({
 
 -    动画
 
-     都应该由浅入深，配有代码和讲解，中间要让学生自己尝试。
+              都应该由浅入深，配有代码和讲解，中间要让学生自己尝试。
 
 
 # 三、课堂补充案例
@@ -567,7 +570,7 @@ div.animate({
 - 仅选择Erlang
 - 选择JavaScript和Erlang
 - 选择所有编程语言
-- 选择名字input
+- 选择name='name'的input对象
 - 选择邮件和名字input
 
 ```

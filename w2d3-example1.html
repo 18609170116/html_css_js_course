@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/w2d3.css" type="text/css"/>
     <script>
-        //'use strict';
+        'use strict';
 
+
+        //列出对象的属性和值
+        function listProp(object) {
+            var s = object.name + "[";
+            for (var key in object) {
+                //该属性是o对象的而不是继承过来的，还记得上一讲的内容吗？
+                if (object.hasOwnProperty(key)) {
+                    //由于Array也是对象，而它的每个元素的索引被视为对象的属性
+                    s += key + " ";
+                }
+            }
+            s += "]";
+            return s;
+        }
+        //列出窗口属性
+        //alert(listProp(window));
+
+        //获取浏览器窗口宽度和高度
         //alert('window inner size:' + window.innerWidth +'x'+ window.innerHeight);
-        //window.open("http://www.baidu.com", '_blank', 'toolbar=yes,location=yes,status=yes,menubar=yes,schrollbars=yes,width=400,height=400');
 
+        //alert('Screen size = ' + screen.width + ' x ' + screen.height + " "+ screen.colorDepth +" " +screen.pixelDepth);
+
+        //navigator对象
         /*
          alert('appName = ' + navigator.appName + '\n' +
          'appVersion = ' + navigator.appVersion + '\n' +
@@ -41,44 +62,140 @@
 
 
         //window.onload是在dom文档树加载完和所有文件加载完之后执行一个函数。
-        window.onload=function(){
-            //第一种方法
-            /*
-             var menu = document.getElementById('drink');
-             console.log(menu.style);
+        window.onload = function () {
+            //window.open("http://www.baidu.com", '_blank', 'toolbar=yes,location=yes,status=yes,menubar=yes,schrollbars=yes,width=400,height=400');
 
-             var drinks = document.getElementsByTagName('dd');
-             for (var i = 0; i < drinks.length; i++) {
-             console.log(drinks[i].innerHTML);
-             }
-             */
+
+            //第一种方法
+
+//             var menu = document.getElementById('drink');
+//            console.log(menu.style);
+
+            var drinks = document.getElementsByTagName('dd');
+
+            var bjdom = drinks[1];
+            console.log(bjdom);
+
+            for (var i = 0; i < drinks.length; i++) {
+                console.log(drinks[i].innerHTML);
+            }
 
 
             // 第二种方法
 
             /*
+             // 通过querySelector获取ID为q1的节点：
+             var dl = document.querySelector('#drink');
+             // 通过querySelectorAll获取q1节点内的符合条件的所有节点：
+             var dd = dl.querySelectorAll('dd');
+             for (var i = 0; i < dd.length; i++) {
+             console.log(dd[i].innerHTML);
+             }
+             */
+
+
+            //获取cookie
+            console.log(document.cookie);
+
+            //通过id获取dom对象
+            var cd = document.getElementById("cd");
+            console.log(cd);
+            console.log(cd.innerHTML);
+
+            //通过标签名获取对象
+            var cd2 = document.getElementsByTagName("li");
+            console.log(cd2);
+            console.log(cd2[1].innerHTML);
+
+            //通过class名称获取对象
+            var cd3 = document.getElementsByClassName("cd_class");
+            console.log(cd3);
+            console.log(cd3[0].innerHTML);
+
+
+            //querySelect选择器
             // 通过querySelector获取ID为q1的节点：
-            var dl = document.querySelector('#drink');
+            var q1 = document.querySelector('#q1');
+            console.log(q1);
+
             // 通过querySelectorAll获取q1节点内的符合条件的所有节点：
-            var dd = dl.querySelectorAll('dd');
-            for (var i = 0; i < dd.length; i++) {
-                console.log(dd[i].innerHTML);
-            }
-            */
+            var ps = q1.querySelectorAll('div.highlighted > p');
+            console.log(ps);
 
 
+            //更改DOM
+            // 获取<p id="p-id">...</p>
+            var p = document.getElementById('p-id');
+            // 设置文本为abc:
+            p.innerHTML = 'ABC'; // <p id="p-id">ABC</p>
+            console.log(p);
+
+            // 设置HTML:
+            p.innerHTML = 'ABC <span id="span1" style="color:red">RED</span> XYZ';
+            console.log(p);
+            // <p>...</p>的内部结构已修改
+
+            var sp1 = document.querySelector("#span1")
+            console.log(sp1.innerHTML);
+
+
+            // 获取<p id="p-id">...</p>
+            //var p = document.getElementById('p-id');
+            // 设置文本:
+
+            p.innerText = "aaa";
+            // HTML被自动编码，无法设置一个<script>节点:
+            // <p id="p-id">&lt;script&gt;alert("Hi")&lt;/script&gt;</p>
+            p.innerHTML = '<p id="p-id2">&lt;script&gt;alert("Hi")&lt;/script&gt;</p>';
+            console.log(p);
+
+
+            //插入
             var div1 = document.getElementById('div1');
-            div1.innerHTML=' div innerHTML';
+            div1.innerHTML = '我是一个div，我的内容被更改了';
 
+            var else_dom = document.getElementById('else');
             var list = document.getElementById('list');
-            div1.innerHTML = 'div 移到这儿了';
-            list.appendChild(div1);
+            list.appendChild(else_dom);
 
-            //更改style
+            //从零新建一个元素，并插入到某个位置后面
+            var
+                list2 = document.getElementById('list'),
+                haskell = document.createElement('p');
+            haskell.id = 'haskell';
+            haskell.innerText = 'Haskell';
+            list2.appendChild(haskell);
+
+            //测试两个对象相等
+            console.log(list === list2);
+
             var d = document.createElement('style');
             d.setAttribute('type', 'text/css');
-            d.innerHTML = 'p { color: red }';
+            d.innerHTML = 'p { background-Color: yellow }';
             document.getElementsByTagName('head')[0].appendChild(d);
+
+
+            //新建一个元素，插入到某个元素的前面
+            var
+                list = document.getElementById('list'),
+                img = document.createElement('img'),
+                ref = document.querySelector("#python");
+            console.log("list[1]="+ref);
+            img.src = "img/body_bg.jpg";
+            img.setAttribute("width","200px");
+            console.log(img);
+            list.insertBefore(img, ref);
+            document.createele
+//
+//            var list = document.getElementById('list');
+//            div1.innerHTML = 'div 移到这儿了';
+//            list.appendChild(div1);
+//
+//            //更改style
+//            var d = document.createElement('style');
+//            d.setAttribute('type', 'text/css');
+//            d.innerHTML = 'p { color: red }';
+//            document.getElementsByTagName('head')[0].appendChild(d);
 
         }
 
@@ -96,13 +213,19 @@
     <dd>鲜榨苹果汁</dd>
 </dl>
 
-<p id="js">JavaScript</p>
-<div id="div1" style="border: 1px solid black;"></div>
-<div id="list" style="border: 2px dotted red">
-    <p id="java">Java</p>
-    <p id="python">Python</p>
-    <p id="scheme">Scheme</p>
+<ul>
+    <li>北京</li>
+    <li id="cd" class="cd_class">成都</li>
+</ul>
+<div id="q1">
+    <p id="else">我会被移动到下面</p>
+    <p id="p-id">JavaScript</p>
+    <div id="div1" style="border: 1px solid black;"></div>
+    <div id="list" class="highlighted" style="border: 2px dotted red">
+        <p id="java">Java</p>
+        <p id="python">Python</p>
+        <p id="scheme">Scheme</p>
+    </div>
 </div>
-
 </body>
 </html>
